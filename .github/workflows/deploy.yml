@@ -8,16 +8,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      DISTRIBUTION_ID: E361J0JROY98AI
+      AWS_S3_BUCKET: blog.wtfender.com
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: 'us-west-2'
+      SOURCE_DIR: 'public'
     steps:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
-    - uses: awact/cloudfront-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
-      env:
-        DISTRIBUTION_ID: E361J0JROY98AI
-        AWS_S3_BUCKET: blog.wtfender.com
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-west-2'
-        SOURCE_DIR: 'public'
+    - uses: awact/cloudfront-action@master
+
+
