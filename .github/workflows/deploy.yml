@@ -19,6 +19,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
+    - name: Update Config
+      run: sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
+
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -31,7 +34,7 @@ jobs:
       uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
-        
+
     - name: Refresh CloudFront
       uses: awact/cloudfront-action@master
 
