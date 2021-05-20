@@ -3,7 +3,7 @@ title = "WTFender"
 theme = "soho"
 languageCode = "en"
 enableInlineShortcodes = true
-summarylength = 10
+summarylength = 100
 enableEmoji = true
 
 pluralizeListTitles = false
@@ -11,9 +11,10 @@ pluralizeListTitles = false
 [params]
   author = "WTFender"
   themeColor = "#03a9f4"
+  
 
 
-#customCss = ["css/blog.css"]
+customCss = ["css/wtfender.css"]
 #customJs = ["js/blog.js"]
 
   [[params.socialIcons]]
@@ -39,12 +40,6 @@ pluralizeListTitles = false
   identifier = "archive"
   url = "/posts/"
 
-  [[menu.main]]
-  name = "About"
-  identifier = "about"
-  weight = 300
-  url = "/about/"
-
 [taxonomies]
   category = "categories"
   series = "series"
@@ -57,8 +52,13 @@ pluralizeListTitles = false
   guessSyntax = false
   hl_Lines = ""
   lineNoStart = 1
-  lineNos = false
+  lineNos = true
   lineNumbersInTable = true
   noClasses = true # if false, you need to provide you own custom CSS
-  style = "monokai"
+  style = "pygments"
   tabWidth = 4
+
+[blackfriday]
+  extensions = [
+    "hardLineBreak"
+  ]

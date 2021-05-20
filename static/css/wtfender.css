@@ -1,0 +1,7 @@
+.content {
+    max-width: 60%;
+}
+
+pre, div .highlight {
+    font-size: 75%;
+}
