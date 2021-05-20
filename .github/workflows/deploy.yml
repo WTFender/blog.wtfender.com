@@ -17,6 +17,10 @@ jobs:
       SOURCE_DIR: 'public'
     steps:
     - uses: actions/checkout@master
+    - uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: latest
+      run: hugo -D
     - uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
