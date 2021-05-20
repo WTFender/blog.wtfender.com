@@ -6,17 +6,15 @@ enableInlineShortcodes = true
 summarylength = 100
 enableEmoji = true
 disqusShortname = "wtfender"
-
 pluralizeListTitles = false
 
 [params]
   author = "WTFender"
   themeColor = "#03a9f4"
-  
+  profilePicture = "img/profile.jpg"
 
-
-customCss = ["css/wtfender.css"]
-#customJs = ["js/blog.js"]
+  customCss = ["css/wtfender.css"]
+  #customJs = ["js/blog.js"]
 
   [[params.socialIcons]]
   icon = "fa-github"
@@ -55,7 +53,7 @@ customCss = ["css/wtfender.css"]
   lineNoStart = 1
   lineNos = true
   lineNumbersInTable = true
-  noClasses = true # if false, you need to provide you own custom CSS
+  noClasses = true
   style = "pygments"
   tabWidth = 4
 
