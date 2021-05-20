@@ -5,6 +5,7 @@ languageCode = "en"
 enableInlineShortcodes = true
 summarylength = 100
 enableEmoji = true
+disqusShortname = "wtfender"
 
 pluralizeListTitles = false
 

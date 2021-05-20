@@ -9,7 +9,7 @@ summary: Regex for parsing F5 WAF syslogs
 ###### Regex parser
 
 Here is a LogRhythm regex parser that I use for F5 WAF syslog violations.
-```regex
+```text
 type\s=\swaf,attack_type\s=\s(?<process>[\D]+),date_time\s=\s[
 \d]{4}\-[\d]{2}\-[\d]{2}\s[\d]{2}:[\d]{2}:[\d]{2},dest_ip\s=\s
 <dip>,dest_port\s=\s<dport>,geo_location\s=\s\D+,http_class_na
@@ -29,7 +29,7 @@ tip>,\srequest\s=\s(?<tag5>.+)
 This is for the actual WAF violations, not the L7 DDoS logs. Some of the tags are LogRhythm specific, but this can be easily modified for whatever SIEM you’d like.
 
 The LogRhythm field tags that I use are mapped like this:
-```
+```text
 attack_type = <process>
 dest_ip = <dip>
 dest_port = <dport>
@@ -55,7 +55,7 @@ request = <tag5>
 I created events with similar naming schemes to the different F5 violation types (Illegal Method, Illegal File Type, etc). Using the `<subject>` tag, I map each log to a relevant event. However, some logs have multiple violation types, separated by a comma. I group all of these into a common event named “Multiple Violations.”
 
 Here is an example of creating events:
-```
+```text
 Multiple Violations:
  <subject> "Matches Pattern" \w+[,]
 Single Violation (Illegal method):
@@ -63,7 +63,7 @@ Single Violation (Illegal method):
 ```  
 
 Lastly, the `<vmid>` tag holds the response code for the request, if the request was allowed it will be a typical HTTP response code (200, 404, etc) and if it was blocked it will be 0. I use the `<vmid>` to set the classification of the common event (in my case; security attack and failed security attack). I simply identify blocked and permitted requests using the following:
-```
+```text
 Blocked Request (Failed Attack): 
  <vmid> = 0
 Permitted Request (Security Attack):
@@ -73,7 +73,7 @@ Permitted Request (Security Attack):
 Keep in mind that the actual source IP for the logs is being tracked as `<snatip>`, not `<sip>`. Build your dashboards accordingly.
 
 Here is the violation log format and example log, provided in the F5 support article:
-```
+```text
 Sample Message:
  Jan 17 20:41:43 type = waf,attack_type = Abuse of Functionality,Information Leakage,HTTP Parser Attack,date_time = 2015-12-17 20:41:42,dest_ip = 192.168.133.186,dest_port = 80,geo_location = US,http_class_name = /dosproof/dosproof-dvwa,ip_client = 172.16.122.112,method = CONNECT,policy_apply_date = 2015-08-24 22:57:44,policy_name = dvwa,protocol = HTTP,query_string = ,request_status = blocked,response_code = 0,severity = Critical,src_port = 42178,support_id = 15969618387221591422,uri = proxytest.zmap.io:80,username = N/A,violations = HTTP protocol compliance failed,Illegal meta character in URL,Illegal method,web_application_name = dvwa-dsyme,x_forwarded_for_header_value = 172.16.122.112, request = CONNECT proxytest.zmap.io:80 HTTP/1.1\r\nHost: 192.168.133.186\r\nUser-Agent: Mozilla/5.0 zgrab/0.x\r\nX-Forwarded-For: 10.100.122.112\r\nVia: 1.1 dca1-10\r\n\r\n"
 
