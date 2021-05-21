@@ -1,0 +1,22 @@
+<div>
+    <button type="button" id="btnCma">Random Artwork</button>
+    <div id="divArtwork" style="display: none;">
+        <pre id="preArtwork"></pre>
+    </div>
+</div>
+
+<script>
+    function showArtwork(artwork){
+        document.getElementById('preArtwork').innerHTML = artwork['preview'];
+        document.getElementById("divArtwork").style.display = "block";
+    }
+
+    function getArtwork(){
+        document.getElementById("btnCma").disabled = true;
+        fetch('http://lambda-lb-449215291.us-west-2.elb.amazonaws.com')
+        .then(response => response.json())
+        .then(data => showArtwork(data));
+    }
+
+    document.getElementById("btnCma").addEventListener("click", getArtwork);
+</script>

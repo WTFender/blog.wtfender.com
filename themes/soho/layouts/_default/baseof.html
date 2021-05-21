@@ -69,6 +69,10 @@
 
   <script src="{{ `js/jquery.min.js` | relURL }}"></script>
   <script src="{{ `js/soho.js` | relURL }}"></script>
+  
+  {{- range .Params.js }}
+  <script src="/js/{{ . }}.js"></script>
+  {{- end }}
 
   {{ range $.Site.Params.customJs -}}
   <script src="{{ . | relURL }}"></script>
