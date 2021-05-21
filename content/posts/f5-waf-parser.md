@@ -2,6 +2,7 @@
 title: "F5 WAF Syslog Parser"
 date: 2017-07-28T00:00:00-00:00
 summary: Regex for parsing F5 WAF syslogs
+tags: ['regex', 'siem']
 ---
 
 ![.](/img/f5waf/f5_parser.png)

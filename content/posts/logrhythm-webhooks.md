@@ -2,6 +2,7 @@
 title: "Webhooks for LogRhythm"
 date: 2017-09-07T00:00:00-00:00
 summary: Steps to send slack webhooks from LogRhythm alarms
+tags: ['webhooks', 'siem']
 ---
 ## Steps
 **1. Add a webhook to your Slack team.**

@@ -2,6 +2,7 @@
 title: "HTB Traceback Write-up"
 date: 2020-05-02T00:00:00-00:00
 summary: A write-up for Traceback on hackthebox.eu
+tags: ['hackthebox', 'ctf']
 ---
 
 This is a quick write-up for the HTB machine [Traceback](https://www.hackthebox.eu/home/machines/profile/233).

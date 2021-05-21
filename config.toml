@@ -34,14 +34,18 @@ pluralizeListTitles = false
 [menu]
 
   [[menu.main]]
+  name = "Tags"
+  weight = 10
+  identifier = "tags"
+  url = "/tags/"
+
+  [[menu.main]]
   name = "Archive"
+  identifier = "posts"
   weight = 100
-  identifier = "archive"
   url = "/posts/"
 
 [taxonomies]
-  category = "categories"
-  series = "series"
   tag = "tags"
 
 [markup]

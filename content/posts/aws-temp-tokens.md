@@ -2,6 +2,7 @@
 title: "AWS Temporary Access Tokens"
 date: 2019-11-03T00:00:00-00:00
 summary: Generate temporary AWS access tokens from a SAML login to the AWS console
+tags: ['aws', 'authentication', 'chrome extension', 'saml']
 ---
 
 ![.](/img/aws-tokens/aws-sts-saml.png)

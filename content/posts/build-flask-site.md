@@ -2,6 +2,7 @@
 title: "Building My Site in Flask"
 date: 2019-10-20T00:00:00-00:00
 summary: An example of building basic Flask sites in Google App Engine
+tags: ['flask', 'python']
 ---
 
 This is a how-to for building simple sites in Flask. If you want a quick personal blog, I'd recommend deploying a pre-built WordPress instance on Google Cloud or AWS. In my case, I wanted to get a little more experience with Flask and general web development, so I built a basic blog in Flask. This could easily serve as an example for deploying APIs on Google App Engine.
