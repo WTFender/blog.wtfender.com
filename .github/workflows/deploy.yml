@@ -20,7 +20,9 @@ jobs:
       uses: actions/checkout@master
 
     - name: Update Config
-      run: sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
+      run: |
+        sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
+        sed -i 's/GOOGLE_TAG/G-FVQ5DMTCDK/g' config.toml
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
