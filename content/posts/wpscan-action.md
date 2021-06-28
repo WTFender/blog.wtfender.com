@@ -30,6 +30,7 @@ jobs:
 ![.](/img/wpscan-action/slack.png)
 
 Optionally, scan results can be referenced in a follow on GitHub Actions step with the step ID and output variable names.
+
 ```yaml
 run: |
     echo ${{ steps.wpscan.outputs.result }}    # JSON scan results
