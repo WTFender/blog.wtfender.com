@@ -30,7 +30,7 @@ jobs:
       run: hugo -D
 
     - name: Setup Credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@master
       with:
         aws-region: us-west-2
         role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9	
