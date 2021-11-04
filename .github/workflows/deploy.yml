@@ -11,9 +11,6 @@ jobs:
     env:
       DISTRIBUTION_ID: E361J0JROY98AI
       AWS_S3_BUCKET: blog.wtfender.com
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_REGION: 'us-west-2'
       SOURCE_DIR: 'public'
     steps:
     - name: Checkout
@@ -31,6 +28,13 @@ jobs:
 
     - name: Hugo Build
       run: hugo -D
+
+    - name: Setup Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-west-2
+        role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9	
+        role-session-name: GitHubActions
 
     - name: S3 Upload
       uses: jakejarvis/s3-sync-action@master
