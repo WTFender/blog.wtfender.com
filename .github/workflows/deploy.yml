@@ -23,8 +23,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-region: us-west-2
-        role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9	
-        role-session-name: GitHubActions
+        role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
 
     - name: Update Config
       run: |
