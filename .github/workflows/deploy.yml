@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     env:
       DISTRIBUTION_ID: E361J0JROY98AI
       AWS_S3_BUCKET: blog.wtfender.com
