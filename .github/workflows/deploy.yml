@@ -20,14 +20,14 @@ jobs:
       uses: actions/checkout@master
 
     - name: Setup Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-region: us-west-2
-        role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
+      run: |
+        OIDC_TOKEN=$(curl -sLS "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=o6s" -H "User-Agent: actions/oidc-client" -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN")
+        JWT=$(echo $OIDC_TOKEN | jq -j '.value')
+        aws assume-role-with-web-identity --role-arn arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9 --role-session-name GitHubActions --web-identity-token $JWT
 
     - name: Test
       run: aws s3 ls
-      
+
     - name: Update Config
       run: |
         sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
