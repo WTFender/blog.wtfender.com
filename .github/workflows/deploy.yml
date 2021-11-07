@@ -31,7 +31,7 @@ jobs:
       with:
         aws-region: ${{ env.AWS_REGION }}
         web-identity-token-file: ${{ env.AWS_WEB_IDENTITY_TOKEN_FILE }}
-        role-to-assume: ${{ env.AWS_ROLE_ARN }}
+        role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
         role-duration-seconds: 1800
         role-session-name: ${{ env.REPO_NAME }}-github-action
     - name: AWS Get Caller Identity
