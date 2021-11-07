@@ -13,6 +13,7 @@ jobs:
       contents: read
     env:
       DISTRIBUTION_ID: E361J0JROY98AI
+      AWS_WEB_IDENTITY_TOKEN_FILE: /tmp/awstoken
       AWS_REGION: us-west-2
       AWS_S3_BUCKET: blog.wtfender.com
       SOURCE_DIR: 'public'
