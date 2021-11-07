@@ -19,13 +19,22 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-
-    - name: Setup Credentials
+    - name: Set Environment Variables
+      run: echo "REPO_NAME=${GITHUB_REPOSITORY#*\/}" >> $GITHUB_ENV
+    - name: Get AWS Credentials Using OIDC
       run: |
-        OIDC_TOKEN=$(curl -sLS "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=o6s" -H "User-Agent: actions/oidc-client" -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN")
-        JWT=$(echo $OIDC_TOKEN | jq -j '.value')
-        aws sts assume-role-with-web-identity --role-arn arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9 --role-session-name GitHubActions --web-identity-token $JWT
-
+        curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+          "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sigstore" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@master
+      with:
+        aws-region: ${{ env.AWS_REGION }}
+        web-identity-token-file: ${{ env.AWS_WEB_IDENTITY_TOKEN_FILE }}
+        role-to-assume: ${{ env.AWS_ROLE_ARN }}
+        role-duration-seconds: 1800
+        role-session-name: ${{ env.REPO_NAME }}-github-action
+    - name: AWS Get Caller Identity
+      run: aws sts get-caller-identity
     - name: Test
       run: aws s3 ls
 
