@@ -25,6 +25,9 @@ jobs:
         aws-region: us-west-2
         role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
 
+    - name: Test
+      run: aws s3 ls
+      
     - name: Update Config
       run: |
         sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
