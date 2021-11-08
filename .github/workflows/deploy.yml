@@ -20,22 +20,16 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Set Environment Variables
-      run: echo "REPO_NAME=${GITHUB_REPOSITORY#*\/}" >> $GITHUB_ENV
-    - name: Get AWS Credentials Using OIDC
+    - name: Setup Creds
       run: |
-        curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-          "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sigstore" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@master
-      with:
-        aws-region: ${{ env.AWS_REGION }}
-        web-identity-token-file: ${{ env.AWS_WEB_IDENTITY_TOKEN_FILE }}
-        role-to-assume: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
-        role-duration-seconds: 1800
-        role-session-name: ${{ env.REPO_NAME }}-github-action
-    - name: AWS Get Caller Identity
-      run: aws sts get-caller-identity
+          export AWS_ROLE_ARN=arn:aws:iam::391785637824:role/ExampleGithubRole
+          export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
+          export AWS_DEFAULT_REGION=us-west-2
+          echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
+          echo AWS_ROLE_ARN=$AWS_ROLE_ARN >> $GITHUB_ENV
+          echo AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION >> $GITHUB_ENV
+          curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
+          aws sts get-caller-identity
     - name: Test
       run: aws s3 ls
 
