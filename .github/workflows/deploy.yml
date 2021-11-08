@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@master
     - name: Setup Creds
       run: |
-          export AWS_ROLE_ARN=arn:aws:iam::391785637824:role/ExampleGithubRole
+          export AWS_ROLE_ARN=arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
           export AWS_DEFAULT_REGION=us-west-2
           echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
