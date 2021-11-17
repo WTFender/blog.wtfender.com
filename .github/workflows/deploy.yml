@@ -48,6 +48,6 @@ jobs:
       run: aws s3 sync public s3://$AWS_S3_BUCKET --acl public-read --follow-symlinks --delete
 
     - name: Refresh CloudFront
-      uses: awact/cloudfront-action@master
+      run: aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
 
 
