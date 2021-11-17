@@ -44,7 +44,7 @@ jobs:
     - name: Hugo Build
       run: |
         hugo -D
-        ls -lha
+        ls -lha public
 
     - name: S3 Upload
       uses: jakejarvis/s3-sync-action@master
