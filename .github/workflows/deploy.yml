@@ -12,12 +12,11 @@ jobs:
       id-token: write
       contents: read
     env:
-      DISTRIBUTION_ID: E361J0JROY98AI
-      AWS_WEB_IDENTITY_TOKEN_FILE: /tmp/awstoken
-      AWS_ROLE_ARN: arn:aws:iam::391785637824:role/github-blog-deploy-Role-1HNCJGO6Z14S9
       AWS_REGION: us-west-2
-      AWS_S3_BUCKET: blog.wtfender.com
-      SOURCE_DIR: 'public'
+      AWS_WEB_IDENTITY_TOKEN_FILE: /tmp/awstoken
+      AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}      
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
     steps:
     - name: Checkout
       uses: actions/checkout@master
@@ -29,7 +28,7 @@ jobs:
     - name: Update Config
       run: |
         sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
-        sed -i 's/GOOGLE_TAG/G-FVQ5DMTCDK/g' config.toml
+        sed -i 's/GOOGLE_TAG/${{secrets.GOOGLE_TAG}}/g' config.toml
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
