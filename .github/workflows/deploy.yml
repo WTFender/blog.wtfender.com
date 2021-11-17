@@ -42,14 +42,10 @@ jobs:
         hugo-version: latest
 
     - name: Hugo Build
-      run: |
-        hugo -D
-        ls -lha public
+      run: hugo -d public
 
     - name: S3 Upload
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl public-read --follow-symlinks --delete
+      run: aws s3 sync public s3://$AWS_S3_BUCKET --acl public-read --follow-symlinks --delete
 
     - name: Refresh CloudFront
       uses: awact/cloudfront-action@master
