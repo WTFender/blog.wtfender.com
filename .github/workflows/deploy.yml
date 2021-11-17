@@ -42,7 +42,9 @@ jobs:
         hugo-version: latest
 
     - name: Hugo Build
-      run: hugo -D
+      run: |
+        hugo -D
+        ls -lha
 
     - name: S3 Upload
       uses: jakejarvis/s3-sync-action@master
