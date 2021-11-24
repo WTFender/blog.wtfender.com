@@ -1,5 +1,5 @@
 {{ define "main" -}}
-  <div class="posts">
+  <div id="posts" class="posts">
     {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.MainSections -}}
     {{- $paginator := .Paginate $pages -}}
 
