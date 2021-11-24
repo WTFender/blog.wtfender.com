@@ -1,5 +1,19 @@
-<aside class="sidebar">
+<script>
+  function toggleSidebar() {
+    var sb = document.getElementById("sidebar");
+    var btn = document.getElementById("sidebarBtn");
+    var content = document.getElementsByClassName("content container")[0];
+    sb.classList.toggle("collapsed");
+    btn.classList.toggle("fa-arrow-circle-left");
+    btn.classList.toggle("fa-arrow-circle-right");
+    content.classList.toggle("collapsed");
+  }
+</script>
+<aside id="sidebar" class="sidebar">
+  <i class="fas fa-arrow-circle-left" id="sidebarBtn" onclick="toggleSidebar()"></i>
   <div class="container">
+    
+    <br><br>
     <div class="sidebar-about">
       {{ with .Site.Params.gravatar }}
       <div class="author-image">
