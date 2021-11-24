@@ -53,7 +53,21 @@ html {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
+#sidebarBtn:hover, .social-icons > a > svg:hover {
+  color: #bdeaff;
+}
+
+.author-image > a > img:hover {
+  border: 6px solid #bdeaff;
+}
+
+#sidebarBtn.fa-arrow-circle-right {
+  position: absolute;
+  left: .5rem;
+}
+
 .sidebar {
+  
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
@@ -61,11 +75,16 @@ html {
 }
 @media (min-width: 48em) {
   .sidebar {
+    transition: 0.3s;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 18rem;
+  }
+
+  .sidebar.collapsed {
+    width: 2rem;
   }
 
   footer {
@@ -95,9 +114,11 @@ html {
 .sidebar-nav-item {
   display: block;
 }
+
+
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  color: #bdeaff;
 }
 .sidebar-nav-item.active {
   font-weight: bold;
@@ -131,6 +152,13 @@ footer {
   border-top: 1px solid #e0e0e0;
 }
 
+.content.collapsed {
+  margin-left: 4rem;
+}
+
+.sidebar.collapsed > .container {
+  display: none;
+}
 
 @media (min-width: 48em) {
   .content {
@@ -161,6 +189,7 @@ footer {
 .sidebar {
   background-color: #49757a;
   color: #fff;
+  
 }
 
 .sidebar a,
