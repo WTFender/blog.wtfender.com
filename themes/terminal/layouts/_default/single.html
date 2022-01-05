@@ -3,6 +3,7 @@
   <h1 class="post-title">
     <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
   <div class="post-meta">
+    {{ .ReadingTime }} min
     {{ if .Params.Date }}
       <span class="post-date">
         {{ .Date.Format "2006-01-02" }}
