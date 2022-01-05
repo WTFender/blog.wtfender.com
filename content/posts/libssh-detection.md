@@ -1,7 +1,7 @@
 ---
 title: "Simple libssh Detection"
 date: 2018-10-18T00:00:00-00:00
-summary: Quickly identify libssh and CVE-2018-10933
+description: Quickly identify libssh and CVE-2018-10933
 tags: ['bash', 'vulnerabilities', 'ssh']
 ---
 

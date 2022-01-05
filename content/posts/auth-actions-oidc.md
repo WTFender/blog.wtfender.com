@@ -1,11 +1,10 @@
 ---
 title: "Authenticating with GitHub Actions"
 date: 2021-11-16T00:00:00-00:00
-summary: Exchange GitHub Actions OIDC tokens for temporary AWS keys
+cover: /img/auth-actions-oidc/actions.png
+description: Exchange GitHub Actions OIDC tokens for temporary AWS keys
 tags: ['github', 'actions', 'aws', 'oidc', 'cicd']
 ---
-
-![.](/img/auth-actions-oidc/actions.png)
 
 **Just-in-time access** is a dominating term in security guidance today. Almost everybody agrees it just makes sense - only give folks access to the resources they need for the minimally acceptable time.
 

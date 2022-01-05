@@ -1,7 +1,7 @@
 ---
 title: "SSH Tunneling & Network Pivoting"
 date: 2017-10-14T00:00:00-00:00
-summary: Examples of tunneling across networks with SSH
+description: Examples of tunneling across networks with SSH
 tags: ['ssh']
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Building My Site in Flask"
 date: 2019-10-20T00:00:00-00:00
-summary: An example of building basic Flask sites in Google App Engine
+description: An example of building basic Flask sites in Google App Engine
 tags: ['flask', 'python']
 ---
 

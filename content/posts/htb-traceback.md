@@ -1,7 +1,8 @@
 ---
 title: "HTB Traceback Write-up"
 date: 2020-05-02T00:00:00-00:00
-summary: A write-up for Traceback on hackthebox.eu
+cover: /img/htb-traceback/tb-webshell2.png
+description: A write-up for Traceback on hackthebox.eu
 tags: ['hackthebox', 'ctf']
 ---
 

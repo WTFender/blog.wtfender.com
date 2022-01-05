@@ -27,8 +27,8 @@ jobs:
 
     - name: Update Config
       run: |
-        sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.toml
-        sed -i 's/GOOGLE_TAG/${{secrets.GOOGLE_TAG}}/g' config.toml
+        sed -i 's/http:\/\/localhost/https:\/\/blog.wtfender.com/g' config.yaml
+        sed -i 's/GOOGLE_TAG/${{secrets.GOOGLE_TAG}}/g' config.yaml
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2

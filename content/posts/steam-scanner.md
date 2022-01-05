@@ -1,7 +1,7 @@
 ---
 title: "Steam Scanner Project"
 date: 2019-05-01T00:00:00-00:00
-summary: Scraping steam profiles for malicious links
+description: Scraping steam profiles for malicious links
 tags: ['python', 'steam']
 ---
 

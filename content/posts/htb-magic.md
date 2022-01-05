@@ -1,7 +1,7 @@
 ---
 title: "HTB Magic Write-up"
 date: 2020-05-12T00:00:00-00:00
-summary: A write-up for Magic on hackthebox.eu
+description: A write-up for Magic on hackthebox.eu
 tags: ['hackthebox', 'ctf']
 ---
 

@@ -1,13 +1,10 @@
 ---
 title: "AWS Temporary Access Tokens"
 date: 2019-11-03T00:00:00-00:00
-summary: Generate temporary AWS access tokens from a SAML login to the AWS console
+cover: /img/aws-tokens/aws-sts-saml.png
+description: Generate temporary AWS access tokens from a SAML login to the AWS console
 tags: ['aws', 'authentication', 'chrome extension', 'saml']
 ---
-
-![.](/img/aws-tokens/aws-sts-saml.png)
-
-## Pre notes
 
 This project is old. [AWS SSO now works with AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) to provide temporary access tokens.
 

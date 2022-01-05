@@ -1,7 +1,7 @@
 ---
 title: "Gamestate Integration with OBS"
 date: 2019-08-20T00:00:00-00:00
-summary: Integrate in-game events with OBS stream overlays
+description: Integrate in-game events with OBS stream overlays
 tags: ['gamestate', 'streaming', 'csgo', 'obs']
 ---
 

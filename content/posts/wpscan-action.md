@@ -1,7 +1,8 @@
 ---
 title: "WPScan with GitHub Actions"
 date: 2021-06-28T00:00:00-00:00
-summary: A free and simple way to scan WordPress sites with GitHub Actions
+cover: /img/wpscan-action/slack.png
+description: A free and simple way to scan WordPress sites with GitHub Actions
 tags: ['wpscan', 'wordpress', 'github', 'vulnerabilities']
 ---
 
