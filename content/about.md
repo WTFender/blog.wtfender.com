@@ -1,0 +1,73 @@
+---
+hideTime: true
+hideComments: true
+title: hello
+---
+This is a simple blog for security, devops, and anything else that piques my interest. Feel free to:
+
+1. [get in touch](https://twitter.com/WTFender)
+2. [read my latest blog post](https://blog.wtfender.com)
+3. [checkout what i've been working on](https://github.com/WTFender)
+
+If you're interested in working together, see below for my certifications and consider reaching out through the [AWS IQ](https://iq.aws/e/mmcintyre5) consultant network.
+
+- GXPN
+- GWAPT
+- GPEN
+- AWS Security
+- Azure MCSE
+- ISC2 CISSP
+
+If you need immediate assistance, email me `michael[at]ciphermon.com` and consider using the below PGP key.
+
+~ Michael // WTFender
+
+```txt
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQINBGHLL3wBEADNo5NvJ0keRJlUE7RdMHxDIgiXXxaFqXJz14JjMI7mQG5NsKol6fVAJWwm
+ihqk3/ge15260F2ds1e4LPl96/QSTX6xVT561keZ31stpWWxbHPfBULUqt7B6eXy9aJ5MrIP
+/3hk3jI3t11RgyZ7IqH6MW++pmSb5RMYBGs6IedoggFqzfYyqWLfsap0zABD5joyX/KRNwPD
+mGH4p5jh+su0HvGSRmo9xpR3wCq4Pgoowfnhw4rrpzVriWhXyJG2FKPZgQwCp5YDHO5NMX2w
+KmgsEydO0dbIxLl/HUNHC0nHrDmdzn5Izpkx8lxvvj7s+v6qcE/GP7k4WHPCvYrcGfQada3H
+XR07rdLCa9ZLgRsyuU9yrwt+FtaV0JsNa7fO25F6PuudC6zylj3ghHjQNFzrt/1T92LhDXzO
+SX1v1rautgkhQnAhknP1ZNiF4rHa/j/F3vVPcUnCguHEAeSKUHwlwNvAS/YRH6WAla5yDA+O
+q8BHvz/A4nB4ogp4u6ESaLsXo3LFCxrWJw3QiEsGH0HjbXdWTLY0hzLyOwWKpg02Ifb2HyB8
+3JF644xtz/cuLzPvzyur/Bu3ZJ59PWkrAvq/6rbgLlsjD/4nx9pqiXrQ190tEDF4yEOgi123
+nzp/G+jtwsj+2c5Bb+MxBp4vFxOyJcDfVTxXVlTnh4CXFScHNQARAQABtCltaWNoYWVsLWNp
+cGhlcm1vbiA8bWljaGFlbEBjaXBoZXJtb24uY29tPokCWAQTAQgAQhYhBOzxW+DXjnnzOBqZ
+trKFqaDOitG1BQJhyy98AhsDBQkDwnoUBQsJCAcCAyICAQYVCgkICwIEFgIDAQIeBwIXgAAK
+CRCyhamgzorRtbKFD/9QJ+jwwuoESBQDEs4QVE3ZWZXVOG31AwnsQ6U9HKI1r511kXSWnkdE
+UEL/BKo8uYMMIBJTZEr4F3adx2xqa+VT1i7n4g+XmRC1+TJq5Tv9K7Yz5JVE14yRXpK80jnf
+AFgDqFqJ7fPQ4pZz0PrIw8obWlPSiUyWeUwM/3nGSpXRU7vQ3XX3TXqoeBZNXX8nJUeS5H7i
+jH3c5cTVeooy7Un8lcdQFzmYRKi73u1St97PzfTQoyxs+IeB4BzFC5+pdZIQf8mPnIgJocw9
+mnHFdOZV1jXAuu0x72fj5DG4Ew2860ctj+pt0o48NQ+ptDsyK7Pk3D2Ww/APmuD9P3azHpnL
+62x4DWaCwJmdlcGJmLOImIsiKAQiIr1Wx1Dmp9DzPaQFxCh0/nj69wQ5ujyt7xSvuwmLK5q7
+BauU8FK6L1sAbQ7pdxQLCZoASss6tXxMtM9zppD+Uj+QQeXrJK2+/L5mZ3Q3GNBR92t2qQWN
+BiApmM0GhmHMX0TOREHdbW3XEcULb+UkOeSTODhd15sf39uxD+Wv9oafwmhc3lY6JrmK/64W
+X+JfeEMYQKeUcvl85BfDwL48j7X8jTke98pTdtjCcvHM6LA3wVkY2veTihWoNcp6pe8e6G2m
+kkTFkSJKczjNIBUKX2XfgtI5X2D5iwbVVXfnUpeHbJx9Biex4nsmirkCDQRhyy98ARAAsxQx
+1HARa9NKtIzuQkkRySBeHG34jdh4bVP/a0FcSP8D+Z+weOAz/KQz9T7DBx48Bo81rxiOHVnh
+zt47eCBjqSnmgGvAr0iJUnJTFh7Jbz5E2obtFzn2df+Wf+XXwAJJ+Tz4Yncck/FRBdm2SDod
+zow0DO0zGkZDtM5EFLsPzy7O3oa+VNnIyivVusYa38K4N1ZvehvEMuYlM5WKCePW0C1mIaf2
+8sxiJ+kVfr5DkedTRsUXKTXAWKkqwjTRX0p2x8oFYPSjUhtr1jq1n6ZEy+FW//hGQvgmAK5N
+uemREy6kwUxbOR4kewxlbOvTo/QhxPdcVSwgA4RnYVF7874TurqMJRkq1XjGxtbn/N7Ri1Nw
+WmWLsiH1ANTMaqNYxaKkPIJ+mzbWkN8HJatyyaqtZ+MXLGj6LdlMwX9kirJGnh//Yxyyk1Uv
+UIeDxoZeKHDKzjV9eK9fwdhDAUmXCxYjDimNRfLsosC1WN26IXEcSHIDAf43fgPKLI7LRtOO
+BZPPYxbR8Y3tVsjZvpvdGWMF7kzFrdhp1tgn9J7Polct5Mk0gYSWA8OKswL4HEh6i4/cbVxP
+yy7KFKWwInUgx9YW3Ar+DEMBG/IAN61fTMt4dDuSw3HqxG3ww1FNpGnakov1WDiTS3xG89mj
+z8JeT+GEN96mM/MUdtDDXXLsBXOJvrkAEQEAAYkCPAQYAQgAJhYhBOzxW+DXjnnzOBqZtrKF
+qaDOitG1BQJhyy98AhsMBQkDwnoUAAoJELKFqaDOitG1c2UQAJJavPXTwKxzg+WpRqu8tSGX
+SNEAJd22JQ4Nh9QUSpc76fX0hwf76OU+nm/vYuO6FzwK6KFwCz/qMNyzuLouAfTrW9fZueYu
+kPbFe6vUJ3WPjHpibwNUHjRQwXmmy3vYK0NI6pQtWpPl0cedRkMR9DvsO+/S7ry1AKo7tyLS
+VjvjQfp2hm7AjVZjq12NvRZGeQhkBFtsuj5ZB50UR2dlslbDWO3JEhvt/Ll1SCcA/2Rs1vfQ
+tWtdu98LgYBug15ePm4ugH2uGnk+DXBZvz7+w683dt8nlvKtXMhxJKiowMLJ33yvR9UhWrtc
+88ozY+IwKXrhVYRxP0SnqUo5ETgabLVlKe0EqjWy4kn4ddvaJP89zd1seUVbfeQ59diPnR5p
+PkhXQYFcmiP/8L0evRByqEyChN4d3ktwG9NUmfAtYxatw2zTdhU5rhUHs4jEpDvYyzBGzod6
+v351ZyL4ky4TSAfw38i8ngjN7TuobovRm71JTuFO7eUHtZbj+fw66dFtHazehRi6JppIMTNx
+2QfKBimsi+pYD9DrOetqr18KfhLRC1lKpczjDHBi6JKvE2X4GCYVgTOryp3KvefLE0k/5z+H
+sJMi9Wa3LxNbeB0KzUrzzRtPTHEwZdZkhnnnnKdBZdT6siDHXg20Y15j9hOL9pYVa816ozgZ
+QCyBqPHZ7R+Z
+=6h60
+-----END PGP PUBLIC KEY BLOCK-----
+```

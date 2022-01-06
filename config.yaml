@@ -37,7 +37,17 @@ languages:
       logo:
         logoText: WTFender
         logoHomeLink: /
-
+    menu:
+      main:
+      - identifier: posts
+        name: Posts
+        url: /posts
+      - identifier: tags
+        name: Tags
+        url: /tags
+      - identifier: about
+        name: About
+        url: /about
 #    [languages.en.menu]
 #      [[languages.en.menu.main]]
 #        identifier = "about"
