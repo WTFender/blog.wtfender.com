@@ -1,1 +1,57 @@
-{{ template "_internal/disqus.html" . }}
+{{ if eq .Params.hideComments true }}
+<!--- empty -->
+{{ else }}
+<div class="pagination__title">
+    <span id="btnComments" class="pagination__title-h">
+        <a id="lblComments" href="#">
+            Hide Comments
+        </a>
+    </span>
+    <hr />
+</div>
+<div id="comments">
+    {{ template "_internal/disqus.html" . }}
+</div>
+{{ end }}
+
+<script>
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+document.getElementById('btnComments').onclick = function(){
+    event.preventDefault();
+    c = getCookie('hideComments')
+    if (c == 'true'){
+        setCookie('hideComments', 'false', 30)
+        document.getElementById( 'lblComments' ).textContent = 'Hide Comments'
+        document.getElementById( 'comments' ).style.display = 'block';
+    } else {
+        setCookie('hideComments', 'true', 30)
+        document.getElementById( 'lblComments' ).textContent = 'Show Comments'
+        document.getElementById( 'comments' ).style.display = 'none';
+    }
+}
+document.addEventListener("DOMContentLoaded", function(){
+    c = getCookie('hideComments')
+    if (c == 'true'){
+        document.getElementById( 'lblComments' ).textContent = 'Show Comments'
+        document.getElementById( 'comments' ).style.display = 'none';
+    }
+});
+</script>

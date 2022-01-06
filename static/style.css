@@ -2,7 +2,7 @@
     display: none;
 }
 
-.logo:hover {
+.logo {
     background-image: linear-gradient(160deg, #23b0ff, #743ad5)
 }
 
@@ -15,6 +15,12 @@
 }
 .menu > ul > li > a:hover {
     text-decoration: underline;
+}
+
+.post-simple {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0; 
 }
 
 .post-title{
@@ -59,5 +65,12 @@
 }
 
 .read-more:hover {
+    text-decoration: underline;
+}
+
+#lblComments {
+    text-decoration: none;
+}
+#lblComments:hover {
     text-decoration: underline;
 }
