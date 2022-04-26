@@ -1,0 +1,30 @@
+<div class="cmart">
+    <button id="cmart-btn">Random Artwork</button>
+    <p id="cmart-title"></p>
+    <p id="cmart-type"></p>
+    <p id="cmart-desc"></p>
+    <p id="cmart-fact"></p>
+    <img id="cmart-img"></img>
+    <pre id="cmart-json" style="display: none;"></pre>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+
+<script type="text/javascript">
+    $("#cmart-btn").click(function() {
+        url = 'https://2kbeijiwpnjw2iovs6ph6faa5m0fctdz.lambda-url.us-west-2.on.aws/'
+        $.getJSON(url, function(data) {
+            $("#cmart-title").text('Title: '+data['Title'])
+            $("#cmart-type").text('Type: '+data['Type'])
+            $("#cmart-desc").html('Description: '+data['Wall_description'])
+            $("#cmart-fact").html('Fun Fact: '+data['Fun_fact'])
+            $("#cmart-img").attr("src", data['Images']['Web']['Url'])
+            $("#cmart-json").text(JSON.stringify(data, null, "  "))
+        });
+    })
+</script>
+<style>
+    #cmart-btn:hover {
+        color: #23b0ff;
+    }
+</style>
