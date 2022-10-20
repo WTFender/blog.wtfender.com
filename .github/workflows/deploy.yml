@@ -12,8 +12,7 @@ jobs:
       id-token: write
       contents: read
     env:
-      AWS_REGION: us-west-2
-      AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}      
+      AWS_REGION: us-west-2     
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
       DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
     steps:
