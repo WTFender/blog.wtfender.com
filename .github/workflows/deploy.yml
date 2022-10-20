@@ -2,8 +2,8 @@ name: Upload S3
 
 on:
   push:
-    paths-ignore:
-    - 'pulumi/**'
+    paths:
+    - '!pulumi/**'
 
 jobs:
   deploy:
