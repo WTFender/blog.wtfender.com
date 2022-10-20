@@ -19,12 +19,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
       
-    - name: Setup Creds
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        role-to-assume: ${{ secrets.AWS_ROLE_ARN }} 
-        role-session-name: github-actions
-        aws-region: us-west-2
+#    - name: Setup Creds
+#      uses: aws-actions/configure-aws-credentials@v1
+#      with:
+#        role-to-assume: ${{ secrets.AWS_ROLE_ARN }} 
+#        role-session-name: github-actions
+#        aws-region: us-west-2
 
     - name: Update Config
       run: |
@@ -39,11 +39,11 @@ jobs:
     - name: Hugo Build
       run: hugo -d public
 
-    - name: S3 Upload
-      run: aws s3 sync public s3://$AWS_S3_BUCKET --acl public-read --follow-symlinks --delete
-
-    - name: Refresh CloudFront
-      run: aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+#    - name: S3 Upload
+#      run: aws s3 sync public s3://$AWS_S3_BUCKET --acl public-read --follow-symlinks --delete
+#
+#    - name: Refresh CloudFront
+#      run: aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
 
     - name: Create Release
       uses: actions/create-release@v1
