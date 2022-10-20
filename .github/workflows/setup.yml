@@ -22,3 +22,14 @@ jobs:
         branch: main
         name: public.tar.gz
         if_no_artifact_found: fail
+
+    - name: Extract Archive
+      run: tar -xzvf public.tar.gz
+
+    - uses: pulumi/actions@v3
+      with:
+        command: up
+        stack-name: ${{ secrets.PULUMI_STACK_NAME }}
+        work-dir: ./pulumi
+      env:
+        PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
