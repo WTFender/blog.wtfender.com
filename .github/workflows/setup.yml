@@ -26,7 +26,17 @@ jobs:
     - name: Extract Archive
       run: tar -xzvf public.tar.gz
 
-    - uses: pulumi/actions@v3
+    - name: Setup Node
+      uses: actions/setup-nodejs@v3
+      with:
+        node-version: lts/*
+        cache: npm
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Deploy Infra
+      uses: pulumi/actions@v3
       with:
         command: up
         stack-name: ${{ secrets.PULUMI_STACK_NAME }}
