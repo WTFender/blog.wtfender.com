@@ -2,6 +2,9 @@ name: Setup AWS
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'pulumi/**'
 
 jobs:
   deploy:
