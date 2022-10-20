@@ -39,6 +39,8 @@ jobs:
         role-session-name: github-actions
         aws-region: us-west-2
 
+    - name: Teset
+      run: aws sts get-caller-identity
     - name: S3 Upload
       run: aws s3 sync public s3://$AWS_S3_BUCKET --acl public-read --follow-symlinks --delete
 
