@@ -37,6 +37,13 @@ jobs:
     - name: Install Dependencies
       run: cd pulumi && npm install
 
+    - name: Setup Creds
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_ARN }} 
+        role-session-name: github-actions
+        aws-region: us-west-2
+
     - name: Deploy Infra
       uses: pulumi/actions@v3
       with:
