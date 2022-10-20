@@ -30,10 +30,9 @@ jobs:
       run: tar -xzvf public.tar.gz
 
     - name: Setup Node
-      uses: actions/setup-nodejs@v3
+      uses: actions/setup-node@v3
       with:
-        node-version: lts/*
-        cache: npm
+        node-version: 16
 
     - name: Install Dependencies
       run: npm install
