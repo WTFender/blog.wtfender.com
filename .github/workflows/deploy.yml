@@ -9,8 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
-      contents: read
+      contents: write
     env:
       AWS_REGION: us-west-2     
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
