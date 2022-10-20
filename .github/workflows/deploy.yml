@@ -22,10 +22,6 @@ jobs:
       uses: actions/checkout@master
       
     - name: Setup Creds
-      run: |
-        curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
-
-    - name: Setup Creds
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: $AWS_ROLE_ARN
