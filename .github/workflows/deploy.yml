@@ -30,7 +30,15 @@ jobs:
         hugo-version: latest
 
     - name: Hugo Build
-      run: hugo -d public
+      run: |
+        hugo -d public
+        tar -czvf public.tar.gz ./public
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: public.tar.gz
+        path: public.tar.gz
 
     - name: Setup Creds
       uses: aws-actions/configure-aws-credentials@v1
