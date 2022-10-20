@@ -20,9 +20,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-
+      
     - name: Setup Creds
       uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: $AWS_ROLE_ARN
+        role-session-name: github-actions
+        aws-region: us-west-2
 
     - name: Update Config
       run: |
