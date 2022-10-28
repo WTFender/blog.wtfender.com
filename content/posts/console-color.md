@@ -1,5 +1,5 @@
 ---
-title: "Color Console - Chrome Extension"
+title: "Console Color - Chrome Extension"
 date: 2022-10-27T00:00:00-00:00
 cover: /img/console-color/128.png
 description: Change the color of the AWS console.
