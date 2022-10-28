@@ -1,7 +1,8 @@
 name: Upload S3
 
 on:
-  workflow_dispatch:
+  push:
+    branch: main
 
 jobs:
   deploy:
