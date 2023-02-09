@@ -39,6 +39,7 @@
     color: white;
     margin: 0px !important;
     padding: 0px !important;
+    padding-bottom: 10px !important;
     border-bottom: 0px !important;
 }
 
@@ -58,7 +59,7 @@
     filter: brightness(80%);
     padding: 0px;
     margin: 0px;
-    max-height: 300px;
+    max-height: 200px;
     max-width: 100%;
     border: 5px solid;
     border-image-slice: 1;
@@ -106,7 +107,7 @@
     text-decoration: underline;
 }
 .child {
-    max-width: 48%;
+    max-width: 49%;
     display: inline-block;
 }
 
@@ -116,8 +117,4 @@
 
 .child-right {
     vertical-align: middle;
-}
-
-.child > img {
-    height: 10px !important;
 }
