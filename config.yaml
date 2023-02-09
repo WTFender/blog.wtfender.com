@@ -1,10 +1,11 @@
 baseurl: 'https://blog.wtfender.com/'
 languageCode: en-us
 theme: terminal
-paginate: 7
+paginate: 10
 enableInlineShortcodes: true
 summarylength: 100
 disqusShortname: wtfender
+enableEmoji: true
 googleAnalytics: "GOOGLE_TAG"
 params:
   contentTypeName: posts

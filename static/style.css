@@ -17,6 +17,18 @@
     text-decoration: underline;
 }
 
+.post {
+    padding-left: 10px;
+    border-left: 5px solid transparent;
+    border-bottom: 0px !important;
+}
+
+.on-list.post:hover {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(120deg, #23b0ff, #23b0ff);
+  
+}
+
 .post-simple {
     margin: 0px;
     padding: 0px;
@@ -25,8 +37,9 @@
 
 .post-title{
     color: white;
-    margin-bottom: 0px;
-    border-bottom: 0px;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-bottom: 0px !important;
 }
 
 .post-title:hover{
@@ -41,15 +54,33 @@
     color: rgba(255, 255, 255, 0.5);
     text-decoration:none;
 }
-
 .post-cover {
-    border: 10px solid;
+    filter: brightness(80%);
+    padding: 0px;
+    margin: 0px;
+    max-height: 300px;
+    max-width: 100%;
+    border: 5px solid;
     border-image-slice: 1;
-    border-width: 25px;
     border-image-source: linear-gradient(120deg, #23b0ff, #23b0ff);
   }
 .post-cover:hover {
+    filter: brightness(90%);
     border-image-source: linear-gradient(120deg, #23b0ff, #743ad5);
+}
+.post-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post-meta-top {
+    margin: 0px;
+    padding: 0px;
+}
+
+.post-meta-bottom {
+    margin: 0px;
+    padding: 0px;
 }
 
 .tag {
@@ -73,4 +104,20 @@
 }
 #lblComments:hover {
     text-decoration: underline;
+}
+.child {
+    max-width: 48%;
+    display: inline-block;
+}
+
+.child-left {
+    vertical-align: middle;
+}
+
+.child-right {
+    vertical-align: middle;
+}
+
+.child > img {
+    height: 10px !important;
 }

@@ -15,47 +15,50 @@
     {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
 
     {{ range $paginator.Pages }}
+    
       <div class="post on-list">
-        <h1 class="post-title">
-          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-        </h1>
-        <div class="post-meta">
-          {{ .ReadingTime }}m
-          <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
-          <span>
-            {{ range .Params.tags }}
-            #<a class="tag" href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
-              {{- . -}}
-            </a>&nbsp;
+        <div class='parent'>
+          <div class='child child-left'>
+            <h1 class="post-title">
+              <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h1>
+
+            <div class="post-meta post-meta-top">
+              <div>
+                {{ .ReadingTime }}m
+                <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+              </div>
+            </div>
+    
+            <div class="post-content" style="cursor: pointer;" onclick="window.location='{{ .Permalink }}';">
+              {{ if .Params.showFullContent }}
+              {{ .Content }}
+              {{ else if .Description }}
+              {{ .Description | markdownify }}
+              {{ else }}
+              {{ if .Truncated }}
+              {{ .Summary }}
+              {{ end }}
+              {{ end }}
+            </div>    
+            
+            {{ if not .Params.showFullContent }}
+
+            <div class="post-meta post-meta-bottom">
+              <span>
+                {{ range .Params.tags }}
+                #<a class="tag" href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
+                  {{- . -}}
+                </a>&nbsp;
+                {{ end }}
+              </span>
+            </div>
             {{ end }}
-          </span>
-
-          {{ with .Params.Author }}
-            <span class="post-author">:: {{ . }}</span>
-          {{ end }}
+          </div>
+          <div class='child child-right'>
+            {{ partial "cover.html" . }}
+          </div>
         </div>
-
-        {{ partial "cover.html" . }}
-
-
-        <div class="post-content">
-          {{ if .Params.showFullContent }}
-          {{ .Content }}
-          {{ else if .Description }}
-          {{ .Description | markdownify }}
-          {{ else }}
-          {{ if .Truncated }}
-          {{ .Summary }}
-          {{ end }}
-          {{ end }}
-        </div>
-
-        {{ if not .Params.showFullContent }}
-        <div>
-          <a class="read-more button"
-            href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
-        </div>
-        {{ end }}
       </div>
     {{ end }}
     {{ partial "pagination.html" . }}

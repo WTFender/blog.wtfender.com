@@ -8,6 +8,6 @@ tags: ['chrome', 'extension', 'csgo', 'faceit']
 
 **Nerdalyzer** is a simple Chrome extension that displays additional team stats in the match lobby.
 
-:rocket: [Install Chrom Extension](https://chrome.google.com/webstore/detail/faceit-nerdalyzer/jpblhiclbpjhnbobjhbmhhpddmcponbm)
+:rocket: [Install Chrome Extension](https://chrome.google.com/webstore/detail/faceit-nerdalyzer/jpblhiclbpjhnbobjhbmhhpddmcponbm)
 
 :computer: [View on GitHub](https://github.com/WTFender/faceit-nerdalyzer)
