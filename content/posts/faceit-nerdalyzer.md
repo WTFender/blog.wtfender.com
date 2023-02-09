@@ -1,6 +1,6 @@
 ---
 title: "Faceit Nerdalyzer"
-date: 2021-11-16T00:00:00-00:00
+date: 2022-12-16T00:00:00-00:00
 cover: /img/faceit/nerdalyzer.png
 description: Display team map stats in the Faceit match lobby
 tags: ['chrome', 'extension', 'csgo', 'faceit']
