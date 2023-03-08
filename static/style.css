@@ -121,3 +121,12 @@
 .child-right {
     vertical-align: middle;
 }
+
+@media (max-width: 768px) {
+  .child {
+    max-width: 100%;
+  }
+  .child-left {
+    margin-bottom: 10px;
+  }
+}
