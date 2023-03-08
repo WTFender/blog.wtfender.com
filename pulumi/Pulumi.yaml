@@ -1,3 +1,0 @@
-name: pulumi-blog
-description: A minimal AWS TypeScript Pulumi program
-runtime: nodejs

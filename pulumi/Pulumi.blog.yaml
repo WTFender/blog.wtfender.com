@@ -1,8 +1,0 @@
-config:
-  aws:region: us-east-1
-  pulumi-blog:dirPath: ../public
-  pulumi-blog:dnsZoneId: Z09711543QWQN4MK96WMJ
-  pulumi-blog:domainName: test.wtfender.com
-  pulumi-blog:altDomainNames: pulumi.wtfender.com
-  pulumi-blog:errorDocument: index.html
-  pulumi-blog:indexDocument: index.html
