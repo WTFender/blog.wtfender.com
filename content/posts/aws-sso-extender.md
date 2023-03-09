@@ -1,5 +1,5 @@
 ---
-title: "AWS SSO Extension"
+title: "AWS SSO Extender"
 date: 2023-03-08T00:00:00-00:00
 cover: /img/aws-sso-extender/extension.png
 description: Quickly access your AWS SSO applications
