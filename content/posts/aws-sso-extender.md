@@ -10,7 +10,7 @@ tags: ['aws', 'sso', 'chrome', 'extension', 'saml']
 :rocket: [Install Chrome Extension](https://chrome.google.com/webstore/detail/aws-sso-extender/pojoaiboolahdaedebpjgnllehpofkep)  
 :computer: [View on GitHub](https://github.com/WTFender/aws-sso-extender)  
 
-AWS SSO Extender is similar to Okta or OneLogin's browser extensions that allow you to quickly access your AWS SSO applications. Additionally, you can search, rename, and favorite applications to keep things organized.
+AWS SSO Extender is similar to Okta or OneLogin's browser extensions that allow you to quickly access your SSO applications. Additionally, you can search, rename, and favorite applications to keep things organized.
 
 ## Background
 [AWS Identity Center](https://aws.amazon.com/iam/identity-center/) (formerly AWS SSO) is becoming the umbrella tool for handling access to AWS, but the user experience isn't complete.
