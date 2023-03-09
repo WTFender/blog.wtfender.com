@@ -15,11 +15,11 @@ AWS SSO Extender is similar to Okta or OneLogin's browser extensions that allow 
 ## Background
 [AWS Identity Center](https://aws.amazon.com/iam/identity-center/) (formerly AWS SSO) is becoming the umbrella tool for handling access to AWS, but the user experience isn't complete.
 
-Most organizations should be using Identity Center by now to manage their AWS console and CLI access; I've [posted before](/posts/aws-temp-tokens/) about the why it's important (tl;dr no static credentials on user machines).
+Most organizations should be using Identity Center by now to manage their AWS console and CLI access; I've [posted before](/posts/aws-temp-tokens/) about why it's important (tl;dr prevents static credentials on user machines).
 
 However, as I've moved AWS users off of their static IAM credentials and onto temporary SSO credentials, I've heard complaints of one thing in particular - the AWS SSO portal doesn't provide a quick way to hop between AWS console accounts/roles (or other applications).
 
-They do have a search feature, but if you have hundreds of accounts with similarly named roles, this can be a nightmare. Additionally, you have to visit this page everytime you want to switch accounts - when you compare that to the tools your devs are likely using to switch accounts, like [AWS Extend Switch Roles](https://chrome.google.com/webstore/detail/aws-extend-switch-roles/jpmkfafbacpgapdghgdpembnojdlgkdl?hl=en), it's not nearly as efficient.
+They do have a search feature, but if you have hundreds of accounts with similarly named roles, this can be a nightmare. Additionally, you have to visit this page everytime you want to switch accounts - when you compare that to the tools your devs are already using to switch accounts, e.g. [AWS Extend Switch Roles](https://chrome.google.com/webstore/detail/aws-extend-switch-roles/jpmkfafbacpgapdghgdpembnojdlgkdl?hl=en), it's not nearly as efficient.
 
 ### Tech bits
 There isn't much clever or sensitive going on here. The extension waits for an AWS SSO login to occur, then lists data for your user, applications, and application profiles from the AWS SSO API.
