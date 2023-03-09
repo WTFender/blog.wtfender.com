@@ -60,15 +60,18 @@ There isn't much clever or sensitive going on here. The extension waits for an A
 From this data, you can generate a login deep link (AKA identity provider initiated sign-in). If not already, you'll be redirected to be authenticated.
 
 ```typescript
-function encodeUriPlusParens(s) {
-  return encodeURIComponent(s).replace(/[!'()*]/g, (c) => `%${c.charCodeAt(0).toString(16)}`);
+function encodeParens(s) {
+  // URI encode parantheses, RFC3986, credit: Mozilla
+  const tmp = encodeURIComponent(s)
+  return tmp.replace(/[!'()*]/g, (c) => `%${c.charCodeAt(0).toString(16)}`);
 };
 
 function createLoginUrl(user, appInstance, appInstanceProfile) {
-  const ssoDirectoryUrl = `https://${user.managedActiveDirectoryId}.awsapps.com/start/#/saml/custom`;
-  const appProfilePath = this.encodeUriPlusParens(btoa(`${user.accountId}_${appInstance.id}_${appInstanceProfile.id}`));
-  const appProfileName = this.encodeUriPlusParens(appInstanceProfile.name);
-  return `${ssoDirectoryUrl}/${appProfileName}/${appProfilePath}`;
+  const ssoUrl = `https://${user.managedActiveDirectoryId}.awsapps.com/start/#/saml/custom`;
+  const profileB64 = btoa(`${user.accountId}_${appInstance.id}_${appInstanceProfile.id}`);
+  const profileEnc = encodeParens(profileB64);
+  const profileNameEnc = encodeParens(appInstanceProfile.name);
+  return `${ssoUrl}/${profileNameEnc}/${profileEnc}`;
 };
 ```
 
