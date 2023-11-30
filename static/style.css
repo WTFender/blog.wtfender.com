@@ -104,13 +104,13 @@
 }
 
 .child-left {
-  min-width: 50%;
+  min-width: 65%;
     vertical-align: middle;
 }
 
 .child-right {
-  margin-left: 5%;
-  width: 40%;
+  margin-left: 8%;
+  width: 25%;
     vertical-align: middle;
 }
 
