@@ -19,14 +19,7 @@
 
 .post {
     padding-left: 10px;
-    border-left: 5px solid transparent;
     border-bottom: 0px !important;
-}
-
-.on-list.post:hover {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(120deg, #23b0ff, #23b0ff);
-  
 }
 
 .post-simple {
@@ -115,10 +108,13 @@
 }
 
 .child-left {
+  min-width: 50%;
     vertical-align: middle;
 }
 
 .child-right {
+  margin-left: 5%;
+  width: 40%;
     vertical-align: middle;
 }
 
@@ -128,5 +124,9 @@
   }
   .child-left {
     margin-bottom: 10px;
+  }
+  .child-right {
+    margin-left: 0px;
+    width: 100%;
   }
 }
