@@ -2,13 +2,16 @@
     display: none;
 }
 
+
 .logo {
     background-image: linear-gradient(160deg, #23b0ff, #743ad5)
 }
 
 .social:hover {
-    text-decoration: overline;
+  color: #5d72e9;
 }
+
+
 
 .menu > ul > li > a {
     text-decoration: none;
