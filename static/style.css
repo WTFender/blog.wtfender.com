@@ -98,13 +98,6 @@
 .read-more:hover {
     text-decoration: underline;
 }
-
-#lblComments {
-    text-decoration: none;
-}
-#lblComments:hover {
-    text-decoration: underline;
-}
 .child {
     max-width: 49%;
     display: inline-block;

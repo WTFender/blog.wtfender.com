@@ -1,6 +1,5 @@
 ---
 hideTime: true
-hideComments: true
 title: hello
 ---
 This is a simple blog for security, devops, and anything else that piques my interest. Feel free to:
