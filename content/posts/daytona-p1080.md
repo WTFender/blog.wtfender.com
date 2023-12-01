@@ -4,6 +4,7 @@ date: 2023-11-30T00:00:00-00:00
 cover: /img/daytona-p1080/daytona.jpg
 description: Lessons learned while removing an EXUP valve motor
 tags: ["exup", "triumph", "daytona", "p1080"]
+draft: true
 ---
 
 ## tl;dr
