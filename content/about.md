@@ -8,6 +8,7 @@ This is a simple blog for security, devops, and anything else that piques my int
 2. [read my latest blog post](https://blog.wtfender.com)
 3. [checkout what i've been working on](https://github.com/WTFender)
 
+<!--
 If you're interested in working together, see below for my certifications and consider reaching out through the [AWS IQ](https://iq.aws/e/mmcintyre5) consultant network.
 
 - GXPN
@@ -16,8 +17,9 @@ If you're interested in working together, see below for my certifications and co
 - AWS Security
 - Azure MCSE
 - ISC2 CISSP
+-->
 
-If you need immediate assistance, email me `michael[at]ciphermon.com` and consider using the below PGP key.
+If you need immediate assistance, email me `wtfender[.]cs[at]gmail.com` and consider using the below PGP key.
 
 ~ Michael // WTFender
 

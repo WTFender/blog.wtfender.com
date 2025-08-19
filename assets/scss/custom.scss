@@ -1,0 +1,1336 @@
+/* Left align sidebar menu items */
+.sidebar .sidebar-menu .menu li {
+    text-align: left !important;
+}
+
+.sidebar .sidebar-menu .menu li a {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    
+    .menu-icon {
+        margin-right: 8px !important;
+        margin-left: 0 !important;
+    }
+    
+    /* Aggressive hover removal */
+    &:hover, &:focus, &:active {
+        background: transparent !important;
+        background-color: transparent !important;
+        color: inherit !important;
+        box-shadow: none !important;
+        border: none !important;
+        outline: none !important;
+    }
+}
+
+/* Left align social icons */
+.sidebar .sidebar-menu .social-menu {
+    justify-content: flex-start !important;
+    
+    a {
+        justify-content: flex-start !important;
+        margin-right: 8px !important;
+        
+        /* Aggressive hover removal from social icons */
+        &:hover, &:focus, &:active {
+            background: transparent !important;
+            background-color: transparent !important;
+            color: inherit !important;
+            box-shadow: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+    }
+}
+
+/* Nuclear option: Remove ALL hover effects from social menu buttons */
+.menu-social, 
+.menu-social a,
+.menu-social a:hover,
+.menu-social a:focus,
+.menu-social a:active,
+.social-menu,
+.social-menu a,
+.social-menu a:hover,
+.social-menu a:focus,
+.social-menu a:active,
+.sidebar .menu-social,
+.sidebar .menu-social a,
+.sidebar .menu-social a:hover,
+.sidebar .menu-social a:focus,
+.sidebar .menu-social a:active,
+.sidebar .social-menu,
+.sidebar .social-menu a,
+.sidebar .social-menu a:hover,
+.sidebar .social-menu a:focus,
+.sidebar .social-menu a:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    transform: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+}
+
+/* Center the sidebar subtitle */
+.sidebar .sidebar-inner .site-meta .site-subtitle {
+    text-align: center !important;
+}
+
+/* Multiple selectors to ensure subtitle centering - CORRECT SELECTOR */
+.sidebar .site-meta .site-subtitle,
+.sidebar .site-subtitle,
+.site-subtitle,
+.sidebar .sidebar-inner .site-subtitle,
+.site-description,
+.sidebar .site-description,
+.sidebar .sidebar-inner .site-description {
+    text-align: center !important;
+}
+
+/* Center the site name and description */
+.sidebar .sidebar-inner .site-meta .site-name {
+    text-align: center !important;
+    background: linear-gradient(135deg, rgba(35, 176, 255, 0.6) 0%, rgba(107, 105, 214, 0.6) 100%) !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    margin: 8px 0 !important;
+    font-weight: 700 !important;
+    font-size: 150% !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Target h1 specifically and the link inside */
+.sidebar .sidebar-inner .site-meta .site-name h1,
+.sidebar .sidebar-inner .site-meta h1.site-name,
+.sidebar h1.site-name {
+    background: linear-gradient(135deg, rgba(35, 176, 255, 0.6) 0%, rgba(107, 105, 214, 0.6) 100%) !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    margin: 8px 0 !important;
+    font-weight: 700 !important;
+    font-size: 150% !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    text-align: center !important;
+    
+    /* Target the link inside the h1 - remove blue color */
+    a, a:link, a:visited, a:hover, a:active {
+        color: white !important;
+        text-decoration: none !important;
+        background: none !important;
+        background-color: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+}
+
+/* Nuclear option - target all possible combinations including hover */
+h1.site-name,
+h1.site-name a,
+h1.site-name a:hover,
+h1.site-name a:focus,
+h1.site-name a:active,
+.site-name,
+.site-name a,
+.site-name a:hover,
+.site-name a:focus,
+.site-name a:active,
+.sidebar .site-name,
+.sidebar .site-name a,
+.sidebar .site-name a:hover,
+.sidebar .site-name a:focus,
+.sidebar .site-name a:active,
+.sidebar h1.site-name,
+.sidebar h1.site-name a,
+.sidebar h1.site-name a:hover,
+.sidebar h1.site-name a:focus,
+.sidebar h1.site-name a:active {
+    color: white !important;
+    background: none !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Light mode variant */
+[data-scheme="light"] .sidebar .sidebar-inner .site-meta .site-name,
+[data-scheme="light"] .sidebar .sidebar-inner .site-meta .site-name h1,
+[data-scheme="light"] .sidebar .sidebar-inner .site-meta h1.site-name,
+[data-scheme="light"] .sidebar h1.site-name {
+    color: #1a1b26 !important;
+}
+
+.sidebar .sidebar-inner .site-meta .site-description {
+    text-align: center !important;
+}
+
+/* Custom blue and purple theme inspired by Terminal theme */
+:root {
+    /* Primary blue accent from Terminal theme */
+    --accent-color: #23B0FF !important;
+    --accent-color-darker: #1E9AE6 !important;
+    --accent-color-text: #fff !important;
+    
+    /* Purple accents for variety */
+    --purple-accent: #6B69D6 !important;
+    --purple-accent-darker: #5A58B8 !important;
+}
+
+/* Dark mode styling */
+[data-scheme="dark"] {
+    /* Background with blue tint like Terminal theme */
+    --body-background: #1A1B26 !important;
+    --card-background: #24263A !important;
+    --card-background-selected: #2A2D44 !important;
+    
+    /* Text colors optimized for dark blue background */
+    --body-text-color: rgba(255, 255, 255, 0.85) !important;
+    --card-text-color-main: rgba(255, 255, 255, 0.95) !important;
+    --card-text-color-secondary: rgba(255, 255, 255, 0.75) !important;
+    --card-text-color-tertiary: rgba(255, 255, 255, 0.6) !important;
+    
+    /* Border colors with blue tint */
+    --card-separator-color: rgba(35, 176, 255, 0.2) !important;
+    --table-border-color: rgba(35, 176, 255, 0.3) !important;
+    
+    /* Link colors using the blue theme */
+    --link-background-color: 35, 176, 255 !important;
+    --link-background-opacity: 0.3 !important;
+    --link-background-opacity-hover: 0.5 !important;
+    
+    /* Code highlighting with blue theme */
+    --code-background-color: rgba(35, 176, 255, 0.15) !important;
+    --code-text-color: #23B0FF !important;
+    
+    /* Blockquote with purple accent */
+    --blockquote-background-color: rgba(107, 105, 214, 0.1) !important;
+    --heading-border-size: 4px !important;
+}
+
+/* Light mode styling */
+[data-scheme="light"] {
+    /* Light backgrounds with subtle blue tint */
+    --body-background: #f8f9ff !important;
+    --card-background: #ffffff !important;
+    --card-background-selected: #f0f4ff !important;
+    
+    /* Text colors for light background */
+    --body-text-color: #2c3e50 !important;
+    --card-text-color-main: #2c3e50 !important;
+    --card-text-color-secondary: #5a6c7d !important;
+    --card-text-color-tertiary: #7a8c9d !important;
+    
+    /* Border colors for light theme */
+    --card-separator-color: rgba(35, 176, 255, 0.15) !important;
+    --table-border-color: rgba(35, 176, 255, 0.2) !important;
+    
+    /* Link colors for light theme */
+    --link-background-color: 35, 176, 255 !important;
+    --link-background-opacity: 0.1 !important;
+    --link-background-opacity-hover: 0.2 !important;
+    
+    /* Code highlighting for light theme */
+    --code-background-color: rgba(35, 176, 255, 0.08) !important;
+    --code-text-color: #1E9AE6 !important;
+    
+    /* Blockquote for light theme */
+    --blockquote-background-color: rgba(107, 105, 214, 0.05) !important;
+}
+
+/* Force dark theme colors on body - only for dark mode */
+[data-scheme="dark"] body {
+    background-color: #1A1B26 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Light mode body styling */
+[data-scheme="light"] body {
+    background-color: #f8f9ff !important;
+    color: #2c3e50 !important;
+}
+
+/* Card styling - dark mode */
+[data-scheme="dark"] .article-list article.post,
+[data-scheme="dark"] .widget,
+[data-scheme="dark"] .article-content,
+[data-scheme="dark"] main.main section.main-section {
+    background-color: #24263A !important;
+    border-color: rgba(35, 176, 255, 0.2) !important;
+}
+
+/* Card styling - light mode */
+[data-scheme="light"] .article-list article.post,
+[data-scheme="light"] .widget,
+[data-scheme="light"] .article-content,
+[data-scheme="light"] main.main section.main-section {
+    background-color: #ffffff !important;
+    border-color: rgba(35, 176, 255, 0.15) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Links styling */
+a {
+    color: #23B0FF !important;
+}
+
+a:hover {
+    color: #1E9AE6 !important;
+}
+
+/* Button styling */
+.menu-item a,
+.pagination a,
+button {
+    color: #23B0FF !important;
+    border-color: #23B0FF !important;
+}
+
+.menu-item a:hover,
+.pagination a:hover,
+button:hover {
+    background-color: #23B0FF !important;
+    color: white !important;
+}
+
+/* Post page tag styling - individual tag borders, transparent container */
+.article-tags,
+.post-tags,
+.tag-list {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.article-tags a,
+.post-tags a,
+.tag-list a {
+    background-color: transparent !important;
+    color: #23B0FF !important;
+    border: 2px solid #23B0FF !important;
+    text-decoration: none !important;
+    padding: 4px 12px !important;
+    border-radius: 6px !important;
+    margin: 3px !important;
+    display: inline-block !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Post page tag hover effects */
+.article-tags a:hover,
+.post-tags a:hover,
+.tag-list a:hover {
+    background-color: #23B0FF !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Alternate purple tags for variety in posts */
+.article-tags a:nth-child(even),
+.post-tags a:nth-child(even),
+.tag-list a:nth-child(even) {
+    background-color: transparent !important;
+    color: #6B69D6 !important;
+    border-color: #6B69D6 !important;
+}
+
+.article-tags a:nth-child(even):hover,
+.post-tags a:nth-child(even):hover,
+.tag-list a:nth-child(even):hover {
+    background-color: #6B69D6 !important;
+    color: white !important;
+}
+
+/* Widget styling - remove backgrounds and add beveled tags */
+.widget {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Widget headers - no background, clean text */
+.widget-header,
+.widget h2,
+.widget h3,
+.widget .widget-title,
+.widget-tagCloud .widget-header,
+.widget-categories .widget-header,
+.widget-archives .widget-header,
+.widget-tagCloud h2,
+.widget-categories h2,
+.widget-archives h2 {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+    margin-bottom: 15px !important;
+    box-shadow: none !important;
+}
+
+/* Dark mode widget headers */
+[data-scheme="dark"] .widget-header,
+[data-scheme="dark"] .widget h2,
+[data-scheme="dark"] .widget h3,
+[data-scheme="dark"] .widget .widget-title,
+[data-scheme="dark"] .widget-tagCloud .widget-header,
+[data-scheme="dark"] .widget-categories .widget-header,
+[data-scheme="dark"] .widget-archives .widget-header,
+[data-scheme="dark"] .widget-tagCloud h2,
+[data-scheme="dark"] .widget-categories h2,
+[data-scheme="dark"] .widget-archives h2 {
+    color: rgba(255, 255, 255, 0.9) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Light mode widget headers */
+[data-scheme="light"] .widget-header,
+[data-scheme="light"] .widget h2,
+[data-scheme="light"] .widget h3,
+[data-scheme="light"] .widget .widget-title,
+[data-scheme="light"] .widget-tagCloud .widget-header,
+[data-scheme="light"] .widget-categories .widget-header,
+[data-scheme="light"] .widget-archives .widget-header,
+[data-scheme="light"] .widget-tagCloud h2,
+[data-scheme="light"] .widget-categories h2,
+[data-scheme="light"] .widget-archives h2 {
+    color: #2c3e50 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Widget content area */
+.widget-body,
+.widget .widget-content {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Additional widget background removal */
+.widget::before,
+.widget::after,
+.widget-header::before,
+.widget-header::after {
+    display: none !important;
+}
+
+/* Ensure all widget containers are transparent */
+.widget-tagCloud,
+.widget-categories,
+.widget-archives,
+.tagCloud,
+.categories,
+.archives {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Beveled badge styling for tags, categories, and archive items - DARK MODE */
+[data-scheme="dark"] .tag-cloud a,
+[data-scheme="dark"] .widget .tag-cloud-tags a,
+[data-scheme="dark"] .widget-tagCloud .tag-cloud-tags a,
+[data-scheme="dark"] .widget-categories .categories a,
+[data-scheme="dark"] .widget-archives .archives a,
+[data-scheme="dark"] .tagCloud a {
+    display: inline-block !important;
+    background: linear-gradient(145deg, #2a4d7a, #1e3a5f) !important;
+    border: 1px solid rgba(35, 176, 255, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 4px 12px !important;
+    margin: 3px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none !important;
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Beveled badge styling for tags, categories, and archive items - LIGHT MODE */
+[data-scheme="light"] .tag-cloud a,
+[data-scheme="light"] .widget .tag-cloud-tags a,
+[data-scheme="light"] .widget-tagCloud .tag-cloud-tags a,
+[data-scheme="light"] .widget-categories .categories a,
+[data-scheme="light"] .widget-archives .archives a,
+[data-scheme="light"] .tagCloud a {
+    display: inline-block !important;
+    background: linear-gradient(145deg, #ffffff, #f0f4ff) !important;
+    border: 1px solid rgba(35, 176, 255, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 4px 12px !important;
+    margin: 3px !important;
+    color: #2c3e50 !important;
+    text-decoration: none !important;
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Hover effects for beveled badges - DARK MODE */
+[data-scheme="dark"] .tag-cloud a:hover,
+[data-scheme="dark"] .widget .tag-cloud-tags a:hover,
+[data-scheme="dark"] .widget-tagCloud .tag-cloud-tags a:hover,
+[data-scheme="dark"] .widget-categories .categories a:hover,
+[data-scheme="dark"] .widget-archives .archives a:hover,
+[data-scheme="dark"] .tagCloud a:hover {
+    background: linear-gradient(145deg, #23B0FF, #1E9AE6) !important;
+    border-color: rgba(35, 176, 255, 0.6) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 2px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Hover effects for beveled badges - LIGHT MODE */
+[data-scheme="light"] .tag-cloud a:hover,
+[data-scheme="light"] .widget .tag-cloud-tags a:hover,
+[data-scheme="light"] .widget-tagCloud .tag-cloud-tags a:hover,
+[data-scheme="light"] .widget-categories .categories a:hover,
+[data-scheme="light"] .widget-archives .archives a:hover,
+[data-scheme="light"] .tagCloud a:hover {
+    background: linear-gradient(145deg, #23B0FF, #1E9AE6) !important;
+    border-color: rgba(35, 176, 255, 0.6) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Alternate purple styling for even items - DARK MODE */
+[data-scheme="dark"] .tag-cloud a:nth-child(even),
+[data-scheme="dark"] .widget .tag-cloud-tags a:nth-child(even),
+[data-scheme="dark"] .widget-tagCloud .tag-cloud-tags a:nth-child(even) {
+    background: linear-gradient(145deg, #6B69D6, #5A58B8) !important;
+    border-color: rgba(107, 105, 214, 0.3) !important;
+}
+
+/* Alternate purple styling for even items - LIGHT MODE */
+[data-scheme="light"] .tag-cloud a:nth-child(even),
+[data-scheme="light"] .widget .tag-cloud-tags a:nth-child(even),
+[data-scheme="light"] .widget-tagCloud .tag-cloud-tags a:nth-child(even) {
+    background: linear-gradient(145deg, #f8f7ff, #ebe9ff) !important;
+    border-color: rgba(107, 105, 214, 0.3) !important;
+    color: #5A58B8 !important;
+}
+
+/* Purple hover effects - DARK MODE */
+[data-scheme="dark"] .tag-cloud a:nth-child(even):hover,
+[data-scheme="dark"] .widget .tag-cloud-tags a:nth-child(even):hover,
+[data-scheme="dark"] .widget-tagCloud .tag-cloud-tags a:nth-child(even):hover {
+    background: linear-gradient(145deg, #7B79E6, #6A68C8) !important;
+    border-color: rgba(107, 105, 214, 0.6) !important;
+}
+
+/* Purple hover effects - LIGHT MODE */
+[data-scheme="light"] .tag-cloud a:nth-child(even):hover,
+[data-scheme="light"] .widget .tag-cloud-tags a:nth-child(even):hover,
+[data-scheme="light"] .widget-tagCloud .tag-cloud-tags a:nth-child(even):hover {
+    background: linear-gradient(145deg, #6B69D6, #5A58B8) !important;
+    border-color: rgba(107, 105, 214, 0.6) !important;
+    color: white !important;
+}
+
+/* Archives widget specific styling */
+.widget-archives .archives li,
+.archives-item {
+    background: transparent !important;
+    border: none !important;
+    padding: 5px 0 !important;
+}
+
+.widget-archives .archives li a,
+.archives-item a {
+    display: inline-block !important;
+    background: linear-gradient(145deg, #2a4d7a, #1e3a5f) !important;
+    border: 1px solid rgba(35, 176, 255, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 6px 14px !important;
+    margin: 2px 0 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Categories widget styling */
+.widget-categories .categories li {
+    background: transparent !important;
+    border: none !important;
+    padding: 3px 0 !important;
+}
+
+/* Remove default list styling */
+.widget ul,
+.widget ol {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.widget li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Tag count styling */
+.tag-cloud .tag-list-count,
+.widget .tag-list-count {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 10px !important;
+    padding: 2px 6px !important;
+    font-size: 0.75em !important;
+    margin-left: 5px !important;
+}
+
+/* Table of Contents widget spacing improvements */
+.widget-toc,
+.widget[data-type="toc"],
+.toc,
+.TableOfContents,
+.table-of-contents {
+    padding: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.widget-toc .widget-body,
+.widget[data-type="toc"] .widget-body,
+.toc .widget-body,
+.TableOfContents .widget-body,
+.table-of-contents .widget-body {
+    padding: 10px 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Remove any background from TOC containers */
+.widget-toc::before,
+.widget-toc::after,
+.TableOfContents::before,
+.TableOfContents::after {
+    display: none !important;
+}
+
+.widget-toc ul,
+.widget[data-type="toc"] ul,
+.toc ul,
+.TableOfContents ul,
+.table-of-contents ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.widget-toc li,
+.widget[data-type="toc"] li,
+.toc li,
+.TableOfContents li,
+.table-of-contents li {
+    margin: 8px 0 !important;
+    padding: 0 !important;
+    line-height: 1.6 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.widget-toc a,
+.widget[data-type="toc"] a,
+.toc a {
+    display: block !important;
+    padding: 8px 12px 8px 16px !important;
+    margin: 6px 0 !important;
+    color: #23B0FF !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    line-height: 1.5 !important;
+}
+
+.widget-toc a:hover,
+.widget[data-type="toc"] a:hover,
+.toc a:hover {
+    background-color: rgba(35, 176, 255, 0.1) !important;
+    color: #1E9AE6 !important;
+    padding-left: 20px !important;
+}
+
+/* Nested TOC items */
+.widget-toc li li,
+.widget[data-type="toc"] li li,
+.toc li li {
+    margin: 4px 0 4px 15px !important;
+    font-size: 0.9em !important;
+}
+
+.widget-toc li li a,
+.widget[data-type="toc"] li li a,
+.toc li li a {
+    padding: 4px 10px !important;
+    color: rgba(35, 176, 255, 0.8) !important;
+}
+
+.widget-toc li li li,
+.widget[data-type="toc"] li li li,
+.toc li li li {
+    margin: 2px 0 2px 20px !important;
+    font-size: 0.85em !important;
+}
+
+/* Dark mode TOC styling */
+[data-scheme="dark"] .widget-toc a:hover,
+[data-scheme="dark"] .widget[data-type="toc"] a:hover,
+[data-scheme="dark"] .toc a:hover,
+[data-scheme="dark"] .TableOfContents a:hover,
+[data-scheme="dark"] .table-of-contents a:hover {
+    background-color: rgba(35, 176, 255, 0.15) !important;
+}
+
+/* Light mode TOC styling */
+[data-scheme="light"] .widget-toc a:hover,
+[data-scheme="light"] .widget[data-type="toc"] a:hover,
+[data-scheme="light"] .toc a:hover,
+[data-scheme="light"] .TableOfContents a:hover,
+[data-scheme="light"] .table-of-contents a:hover {
+    background-color: rgba(35, 176, 255, 0.08) !important;
+}
+
+/* TESTING: Make TOC text bold and red to verify CSS is loading */
+.TableOfContents a,
+.table-of-contents a,
+.widget-toc a,
+.toc a,
+aside .widget a,
+nav.TableOfContents a {
+    font-weight: bold !important;
+    color: red !important;
+}
+
+/* Wide mode toggle button styling */
+#wide-mode-toggle {
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: var(--sidebar-element-separation) !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    border: 2px solid transparent !important;
+    
+    svg {
+        margin-inline-end: var(--sidebar-element-separation) !important;
+        width: 20px !important;
+        height: 20px !important;
+        stroke-width: 1.33 !important;
+    }
+    
+    &:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+        border-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    &.active {
+        background: var(--accent-color, #23B0FF) !important;
+        color: white !important;
+        border-color: var(--accent-color, #23B0FF) !important;
+        
+        svg {
+            color: white !important;
+            stroke: white !important;
+        }
+        
+        span {
+            font-weight: bold !important;
+        }
+    }
+    
+    /* Visual indicator when active */
+    &.active::before {
+        content: "● " !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+}
+
+/* Floating close button for wide mode */
+body #wide-mode-close {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 99999 !important;
+    display: none !important;
+    pointer-events: auto !important;
+    
+    button {
+        background: var(--accent-color, #23B0FF) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 8px !important;
+        padding: 12px 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        cursor: pointer !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+        transition: all 0.2s ease !important;
+        
+        &:hover {
+            background: var(--accent-color-darker, #1a8fcc) !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        svg {
+            width: 16px !important;
+            height: 16px !important;
+            stroke-width: 2 !important;
+        }
+        
+        span {
+            font-size: 14px !important;
+            white-space: nowrap !important;
+        }
+    }
+    
+    /* Animation when showing */
+    &[style*="block"] {
+        animation: fadeInSlideLeft 0.3s ease-out !important;
+    }
+}
+
+/* Extra specificity for when it should be visible */
+body.wide-mode #wide-mode-close {
+    display: block !important;
+}
+
+@keyframes fadeInSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Force all sidebar text to be white - nuclear option
+.left-sidebar,
+.sidebar,
+aside,
+.widget-area {
+    * {
+        color: white !important;
+    }
+    
+    a,
+    a:link,
+    a:visited {
+        color: white !important;
+        
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--accent-color) !important;
+        }
+    }
+}
+
+// Hide the Archives widget completely
+.widget.archives {
+    display: none !important;
+}
+
+// Custom TOC template handles the layout, no special CSS needed
+
+// Change "Table of Contents" text to "Contents"
+.widget.toc .widget-title,
+.widget-toc .widget-title,
+#TableOfContents .title,
+.table-of-contents .title {
+    h2, h3, h4 {
+        font-size: 0 !important;
+        
+        &::after {
+            content: "Contents" !important;
+            font-size: 1rem !important;
+            color: white !important;
+        }
+    }
+}
+
+// Alternative selectors for different TOC structures
+#TableOfContents,
+.table-of-contents {
+    .title,
+    .header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+}
+
+// Table of Contents styling - more specific selectors
+.widget.toc,
+.widget-toc,
+#TableOfContents,
+.table-of-contents,
+aside .widget.toc {
+    .widget-title,
+    .widget-title h2,
+    .widget-title h3 {
+        color: white !important;
+    }
+    
+    .widget-content,
+    .toc-content,
+    #TableOfContents {
+        color: white !important;
+        
+        * {
+            color: white !important;
+        }
+        
+        a,
+        a:link,
+        a:visited {
+            color: white !important;
+            
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--accent-color) !important;
+            }
+        }
+        
+        ul, ol {
+            color: white !important;
+            
+            li {
+                color: white !important;
+                
+                a {
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
+
+// Even more specific - target the sidebar widget area
+.left-sidebar .widget,
+.widget-area .widget {
+    &.toc {
+        * {
+            color: white !important;
+        }
+        
+        a {
+            color: white !important;
+            
+            &:hover {
+                color: var(--accent-color) !important;
+            }
+        }
+    }
+}
+
+// Wide mode layout adjustments
+body.wide-mode {
+    --main-top-padding: 20px !important;
+}
+
+body.wide-mode .main-container,
+body.wide-mode .container {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+}
+
+/* Hide sidebar and TOC in wide mode */
+body.wide-mode aside,
+body.wide-mode .sidebar,
+body.wide-mode .widget-toc,
+body.wide-mode .TableOfContents,
+body.wide-mode .table-of-contents {
+    display: none !important;
+}
+
+/* Expand content area in wide mode */
+body.wide-mode .main,
+body.wide-mode .article-page,
+body.wide-mode .content,
+body.wide-mode article {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    grid-column: 1 / -1 !important;
+}
+
+/* Adjust grid layout for wide mode */
+body.wide-mode .main-container {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+}
+
+body.wide-mode .left-sidebar,
+body.wide-mode .right-sidebar {
+    display: none !important;
+}
+
+/* Make content use full width */
+body.wide-mode .article-content,
+body.wide-mode .post-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Adjust typography for wider content */
+body.wide-mode .article-content p,
+body.wide-mode .post-content p {
+    max-width: 80ch !important;
+    line-height: 1.7 !important;
+}
+
+body.wide-mode .article-content pre,
+body.wide-mode .post-content pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+}
+
+/* Additional TOC background removal - target all possible containers */
+.article-page .widget,
+.article-page aside .widget,
+.sidebar .widget,
+.sidebar .widget-toc,
+.sidebar .TableOfContents,
+.post-sidebar .widget,
+.post-sidebar .widget-toc {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove any card-like styling from TOC widgets */
+.widget.widget-toc,
+.widget[data-type="toc"] {
+    --card-background: transparent !important;
+    --card-background-selected: transparent !important;
+}
+
+/* More aggressive TOC link styling with specific selectors */
+.TableOfContents a,
+.table-of-contents a,
+.widget-toc a,
+.widget[data-type="toc"] a,
+.toc a,
+aside .widget a:not(.tagCloud-tags a),
+.sidebar a:not(.tagCloud-tags a),
+nav.TableOfContents a {
+    display: block !important;
+    padding: 12px 16px 12px 24px !important;
+    margin: 8px 0 !important;
+    color: #23B0FF !important;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    line-height: 1.6 !important;
+    background: transparent !important;
+}
+
+.TableOfContents a:hover,
+.table-of-contents a:hover,
+.widget-toc a:hover,
+.widget[data-type="toc"] a:hover,
+.toc a:hover,
+aside .widget a:not(.tagCloud-tags a):hover,
+.sidebar a:not(.tagCloud-tags a):hover,
+nav.TableOfContents a:hover {
+    background-color: rgba(35, 176, 255, 0.1) !important;
+    color: #1E9AE6 !important;
+    padding-left: 32px !important;
+}
+
+/* Hide last updated timestamp */
+.article-lastmod {
+    display: none !important;
+}
+
+.article-time,
+.article-time time,
+.post-footer-meta,
+.article-footer .article-time,
+.article-meta .article-time,
+.meta .lastmod,
+.lastmod,
+.post-lastmod,
+.updated {
+    display: none !important;
+}
+
+/* Custom Markdown Text Widget Styling */
+.widget.markdownText {
+    .markdown-content {
+        color: white !important;
+        line-height: 1.6;
+        
+        p {
+            margin: 0.8em 0;
+            color: white !important;
+        }
+        
+        strong, b {
+            font-weight: 600;
+            color: white !important;
+        }
+        
+        em, i {
+            font-style: italic;
+            color: white !important;
+        }
+        
+        a {
+            color: var(--accent-color, #23B0FF) !important;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+            
+            &:hover {
+                border-bottom-color: var(--accent-color, #23B0FF);
+            }
+        }
+        
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: var(--code-font-family, monospace);
+            font-size: 0.9em;
+            color: var(--accent-color, #23B0FF) !important;
+        }
+        
+        blockquote {
+            border-left: 3px solid var(--accent-color, #23B0FF);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 4px 4px 0;
+            
+            p {
+                margin: 0.5em 0;
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+        }
+        
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 0.8em 0;
+            
+            li {
+                margin: 0.3em 0;
+                color: white !important;
+            }
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: white !important;
+            margin: 1em 0 0.5em 0;
+            font-weight: 600;
+        }
+    }
+}
+
+/* Match tag cloud widget styles to article tags */
+.widget.tagCloud {
+    .tagCloud-tags {
+        a {
+            // Complete reset of all background and shadow properties
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+            background-clip: initial !important;
+            color: #23B0FF !important;
+            border: 2px solid #23B0FF !important;
+            box-shadow: none !important;
+            border-radius: 6px !important;
+            padding: 4px 12px !important;
+            margin: 3px !important;
+            display: inline-block !important;
+            font-weight: 500 !important;
+            transition: all 0.2s ease !important;
+            text-decoration: none !important;
+            filter: none !important;
+            opacity: 1 !important;
+            
+            // Override sidebar link styling that's causing transparency issues
+            line-height: normal !important;
+            
+            &:hover {
+                background: #23B0FF !important;
+                background-color: #23B0FF !important;
+                background-image: none !important;
+                color: white !important;
+                transform: translateY(-1px) !important;
+                padding: 4px 12px !important;
+                box-shadow: none !important;
+                filter: none !important;
+                opacity: 1 !important;
+            }
+
+            // Alternate purple tags for variety (matching article tags)
+            &:nth-child(even) {
+                background: transparent !important;
+                background-color: transparent !important;
+                background-image: none !important;
+                color: #6B69D6 !important;
+                border-color: #6B69D6 !important;
+
+                &:hover {
+                    background: #6B69D6 !important;
+                    background-color: #6B69D6 !important;
+                    background-image: none !important;
+                    color: white !important;
+                    padding: 4px 12px !important;
+                    box-shadow: none !important;
+                    filter: none !important;
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+
+/* Fix flexbox layout in markdown widget for project listings */
+.widget.markdownText {
+    div[style*="display: flex"] {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 8px !important;
+        width: 100% !important;
+        
+        span {
+            color: white !important;
+            
+            &:first-child {
+                flex: 1;
+                text-align: left;
+            }
+            
+            &:last-child {
+                flex-shrink: 0;
+                text-align: right;
+                font-size: 0.9em !important;
+            }
+        }
+    }
+    
+    /* Remove hover effects from project icons and project names - AGGRESSIVE OVERRIDE */
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:focus,
+    a:active {
+        color: inherit !important;
+        text-decoration: none !important;
+        background: none !important;
+        background-color: transparent !important;
+        opacity: 1 !important;
+        transform: none !important;
+        border-bottom: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        
+        strong,
+        strong:hover,
+        strong:focus,
+        strong:active {
+            color: inherit !important;
+            background: none !important;
+            background-color: transparent !important;
+            text-decoration: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+/* Additional nuclear option - override any theme link styling in markdown widgets */
+.widget.markdownText a,
+.widget.markdownText a:link,
+.widget.markdownText a:visited,
+.widget.markdownText a:hover,
+.widget.markdownText a:focus,
+.widget.markdownText a:active {
+    color: inherit !important;
+    background: none !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+}
+
+/* Specifically target hover effects with maximum specificity */
+.widget.markdownText div a:hover,
+.widget.markdownText div strong a:hover,
+.widget.markdownText a:hover strong {
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    color: inherit !important;
+    opacity: 1 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+}
+
+/* Hide Hugo and theme attribution in footer */
+.site-footer .powerby {
+    display: none !important;
+}

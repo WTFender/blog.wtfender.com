@@ -1,0 +1,61 @@
+baseurl: 'https://blog.wtfender.com/'
+languageCode: en-us
+theme: terminal
+paginate: 7
+enableInlineShortcodes: true
+summarylength: 100
+disqusShortname: wtfender
+enableEmoji: true
+googleAnalytics: "GOOGLE_TAG"
+params:
+  contentTypeName: posts
+  themeColor: blue
+  showMenuItems: 3
+  showLanguageSelector: false
+  fullWidthTheme: false
+  centerTheme: true
+  autoCover: false
+  showLastUpdated: false
+  twitter:
+    creator: WTFender
+    site: WTFender
+languages:
+  en:
+    languageName: English
+    title: WTFender
+    subtitle: A simple blog
+    owner: ''
+    keywords: ''
+    copyright: ''
+    menuMore: Show more
+    readMore: Read more
+    readOtherPosts: Read other posts
+    newerPosts: Newer posts
+    olderPosts: Older posts
+    missingContentMessage: Page not found...
+    missingBackButtonLabel: Back to home page
+    params:
+      logo:
+        logoText: WTFender
+        logoHomeLink: /
+    menu:
+      main:
+      - identifier: posts
+        name: Posts
+        url: /posts
+      - identifier: tags
+        name: Tags
+        url: /tags
+      - identifier: about
+        name: About
+        url: /about
+#    [languages.en.menu]
+#      [[languages.en.menu.main]]
+#        identifier = "about"
+#        name = "About"
+#        url = "/about"
+#      [[languages.en.menu.main]]
+#        identifier = "showcase"
+#        name = "Showcase"
+#        url = "/showcase"
+

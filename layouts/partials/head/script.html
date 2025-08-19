@@ -1,0 +1,2 @@
+{{ $wideMode := resources.Get "ts/wide-mode.ts" | js.Build | minify }}
+<script src="{{ $wideMode.RelPermalink }}" defer></script>

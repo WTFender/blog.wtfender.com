@@ -4,6 +4,7 @@ date: 2024-10-16T00:00:00-00:00
 cover: /img/qr-quarters/quarters.png
 description: Simple bypasses for QR code detections in emails
 tags: ['qr', 'code', 'bypass', 'email', 'ocr']
+draft: true
 ---
 
 # OCR for QR Codes

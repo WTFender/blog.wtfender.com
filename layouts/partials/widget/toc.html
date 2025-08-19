@@ -1,0 +1,14 @@
+{{ if (.Context.Scratch.Get "TOCEnabled") }}
+    <section class="widget archives">
+        <div class="widget-header" style="margin-bottom: 1rem;">
+            <div class="widget-icon" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                {{ partial "helper/icon" "hash" }}
+            </div>
+            <h2 class="widget-title section-title" style="display: inline-block; margin: 0;">Contents</h2>
+        </div>
+        
+        <div class="widget--toc">
+            {{ .Context.TableOfContents }}
+        </div>
+    </section>
+{{ end }}
