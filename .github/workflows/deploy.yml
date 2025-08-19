@@ -24,9 +24,9 @@ jobs:
         sed -i 's/GOOGLE_TAG/${{secrets.GOOGLE_TAG}}/g' config.yaml
 
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: latest
+        hugo-version: '0.123.8'
         extended: true
 
     - name: Hugo Build
