@@ -15,9 +15,13 @@
             {{- end -}}
         {{- end -}}
         
-        {{/* Always use extended layout for posts */}}
-        {{- if eq .Section "posts" -}}
-            {{- $hasWidget = true -}}
+        {{/* For posts, always use extended layout if TOC is configured */}}
+        {{- if eq .Type "posts" -}}
+            {{- range .Site.Params.widgets.page -}}
+                {{- if eq .type "toc" -}}
+                    {{- $hasWidget = true -}}
+                {{- end -}}
+            {{- end -}}
         {{- end -}}
         
         <div class="container main-container flex on-phone--column {{ if $hasWidget }}extended{{ else }}compact{{ end }}">

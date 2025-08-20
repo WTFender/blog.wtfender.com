@@ -1,0 +1,23 @@
+{{- $context := .Context -}}
+{{- $limit := default 10 .Params.limit -}}
+<section class="widget">
+    <div class="widget-header" style="margin-bottom: 1rem;">
+        <div class="widget-icon" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+            {{ partial "helper/icon" "categories" }}
+        </div>
+        <h2 class="widget-title section-title" style="display: inline-block; margin: 0;">{{ T "widget.categories.title" }}</h2>
+    </div>
+
+    <section class="widget-categories">
+        <ul class="widget-categories--list">
+            {{ range first $limit $context.Site.Taxonomies.categories.Alphabetical }}
+                <li class="widget-categories--item">
+                    <a href="{{ .Page.RelPermalink }}">
+                        {{ .Page.Title }}
+                    </a>
+                    <span class="count">{{ .Count }}</span>
+                </li>
+            {{ end }}
+        </ul>
+    </section>
+</section>

@@ -57,10 +57,10 @@ widget:
 
 search:
     title:
-        other: Search
+        other: ""
 
     placeholder:
-        other: Type something...
+        other: Search...
 
     resultTitle:
         other: "#PAGES_COUNT pages (#TIME_SECONDS seconds)"

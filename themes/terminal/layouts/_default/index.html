@@ -49,7 +49,7 @@
               <span>
                 {{ range .Params.tags }}
                 #<a class="tag" href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}">
-                  {{- . -}}
+                  {{- . | lower -}}
                 </a>&nbsp;
                 {{ end }}
               </span>

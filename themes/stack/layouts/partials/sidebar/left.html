@@ -38,7 +38,8 @@
     </header>
 
     {{- with .Site.Menus.social -}}
-        <ol class="menu-social">
+        <br>
+        <ol class="menu-social" style="justify-content: center;">
             {{ range . }}
                 <li>
                     <a 
@@ -55,6 +56,7 @@
                 </li>
             {{ end }}
         </ol>
+        <br>
     {{- end -}}
 
     <ol class="menu" id="main-menu">
@@ -74,6 +76,16 @@
             </a>
         </li>
         {{ end }}
+
+        <!--- ToC Widget -->
+        <section class="widget archives">
+            <br>
+            <div class="widget--toc">
+                {{ .TableOfContents }}
+            </div>
+        </section>
+
+
         <li class="menu-bottom-section">
             <ol class="menu">
                 {{- $currentLanguageCode := .Language.Lang -}}

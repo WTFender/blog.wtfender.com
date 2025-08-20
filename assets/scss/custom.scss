@@ -30,50 +30,9 @@
     a {
         justify-content: flex-start !important;
         margin-right: 8px !important;
-        
-        /* Aggressive hover removal from social icons */
-        &:hover, &:focus, &:active {
-            background: transparent !important;
-            background-color: transparent !important;
-            color: inherit !important;
-            box-shadow: none !important;
-            border: none !important;
-            outline: none !important;
-        }
     }
 }
 
-/* Nuclear option: Remove ALL hover effects from social menu buttons */
-.menu-social, 
-.menu-social a,
-.menu-social a:hover,
-.menu-social a:focus,
-.menu-social a:active,
-.social-menu,
-.social-menu a,
-.social-menu a:hover,
-.social-menu a:focus,
-.social-menu a:active,
-.sidebar .menu-social,
-.sidebar .menu-social a,
-.sidebar .menu-social a:hover,
-.sidebar .menu-social a:focus,
-.sidebar .menu-social a:active,
-.sidebar .social-menu,
-.sidebar .social-menu a,
-.sidebar .social-menu a:hover,
-.sidebar .social-menu a:focus,
-.sidebar .social-menu a:active {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: inherit !important;
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-    transform: none !important;
-    transition: none !important;
-    opacity: 1 !important;
-}
 
 /* Center the sidebar subtitle */
 .sidebar .sidebar-inner .site-meta .site-subtitle {
@@ -864,12 +823,47 @@ aside,
     }
 }
 
-// Hide the Archives widget completely
-.widget.archives {
+// Hide the Archives widget only when it contains widget--archives child
+.widget.archives:has(.widget-archive--list) {
     display: none !important;
 }
 
-// Custom TOC template handles the layout, no special CSS needed
+// Hide the Archives widget when element id #TableOfContents has no child elements
+.sidebar.right-sidebar.sticky:has(#TableOfContents:empty) {
+    display: none !important;
+}
+// Make #TableOfContents child <a> font text white
+#TableOfContents a {
+    color: white !important;
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--accent-color) !important;
+    }
+}
+
+// Display widget icon and title on the same line - simplified for new HTML structure
+.widget.archives {
+    .widget-icon {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        
+        svg {
+            width: 20px !important;
+            height: 20px !important;
+            color: white !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .widget-title.section-title {
+            margin: 0 !important;
+            color: white !important;
+        }
+    }
+}
+
+
 
 // Change "Table of Contents" text to "Contents"
 .widget.toc .widget-title,
@@ -1047,18 +1041,11 @@ body.wide-mode .post-content pre {
 }
 
 /* More aggressive TOC link styling with specific selectors */
-.TableOfContents a,
-.table-of-contents a,
-.widget-toc a,
-.widget[data-type="toc"] a,
-.toc a,
-aside .widget a:not(.tagCloud-tags a),
-.sidebar a:not(.tagCloud-tags a),
-nav.TableOfContents a {
+
+#TableOfContents a {
     display: block !important;
     padding: 12px 16px 12px 24px !important;
     margin: 8px 0 !important;
-    color: #23B0FF !important;
     text-decoration: none !important;
     border-radius: 4px !important;
     transition: all 0.2s ease !important;
@@ -1066,33 +1053,9 @@ nav.TableOfContents a {
     background: transparent !important;
 }
 
-.TableOfContents a:hover,
-.table-of-contents a:hover,
-.widget-toc a:hover,
-.widget[data-type="toc"] a:hover,
-.toc a:hover,
-aside .widget a:not(.tagCloud-tags a):hover,
-.sidebar a:not(.tagCloud-tags a):hover,
-nav.TableOfContents a:hover {
-    background-color: rgba(35, 176, 255, 0.1) !important;
-    color: #1E9AE6 !important;
-    padding-left: 32px !important;
-}
 
 /* Hide last updated timestamp */
 .article-lastmod {
-    display: none !important;
-}
-
-.article-time,
-.article-time time,
-.post-footer-meta,
-.article-footer .article-time,
-.article-meta .article-time,
-.meta .lastmod,
-.lastmod,
-.post-lastmod,
-.updated {
     display: none !important;
 }
 
