@@ -92,35 +92,6 @@
     }
 }
 
-/* Nuclear option - target all possible combinations including hover */
-h1.site-name,
-h1.site-name a,
-h1.site-name a:hover,
-h1.site-name a:focus,
-h1.site-name a:active,
-.site-name,
-.site-name a,
-.site-name a:hover,
-.site-name a:focus,
-.site-name a:active,
-.sidebar .site-name,
-.sidebar .site-name a,
-.sidebar .site-name a:hover,
-.sidebar .site-name a:focus,
-.sidebar .site-name a:active,
-.sidebar h1.site-name,
-.sidebar h1.site-name a,
-.sidebar h1.site-name a:hover,
-.sidebar h1.site-name a:focus,
-.sidebar h1.site-name a:active {
-    color: white !important;
-    background: none !important;
-    background-color: transparent !important;
-    text-decoration: none !important;
-    border: none !important;
-    outline: none !important;
-}
-
 /* Light mode variant */
 [data-scheme="light"] .sidebar .sidebar-inner .site-meta .site-name,
 [data-scheme="light"] .sidebar .sidebar-inner .site-meta .site-name h1,
@@ -1296,4 +1267,8 @@ body.wide-mode .post-content pre {
 /* Hide Hugo and theme attribution in footer */
 .site-footer .powerby {
     display: none !important;
+}
+
+a:hover {
+    color: red !important;
 }
