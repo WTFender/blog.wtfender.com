@@ -12,8 +12,8 @@ DefaultContentLanguage: en
 hasCJKLanguage: false
 
 services:
-    disqus:
-        shortname: wtfender
+    # disqus:
+    #    shortname: wtfender
     googleAnalytics:
         id: "GOOGLE_TAG"
 
@@ -57,8 +57,8 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
-        provider: disqus
+        enabled: false
+        # provider: disqus
 
     widgets:
         homepage:
