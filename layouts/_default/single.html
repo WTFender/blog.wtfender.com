@@ -19,3 +19,17 @@
 
     {{ partialCached "article/components/photoswipe" . }}
 {{ end }}
+
+{{ define "right-sidebar" }}
+    <aside class="sidebar right-sidebar sticky">
+        <section class="widget archives">
+            <div class="widget-icon" style="padding-bottom: 1rem;">
+                {{ partial "helper/icon" "hash" }}
+                <h2 class="widget-title section-title">Contents</h2>
+            </div>
+            <div class="widget--toc">
+                {{ .TableOfContents }}
+            </div>
+        </section>
+    </aside>
+{{ end }}

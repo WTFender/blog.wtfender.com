@@ -510,19 +510,6 @@ button:hover {
     padding: 3px 0 !important;
 }
 
-/* Remove default list styling */
-.widget ul,
-.widget ol {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.widget li {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
 /* Tag count styling */
 .tag-cloud .tag-list-count,
 .widget .tag-list-count {
@@ -534,106 +521,6 @@ button:hover {
     margin-left: 5px !important;
 }
 
-/* Table of Contents widget spacing improvements */
-.widget-toc,
-.widget[data-type="toc"],
-.toc,
-.TableOfContents,
-.table-of-contents {
-    padding: 0 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.widget-toc .widget-body,
-.widget[data-type="toc"] .widget-body,
-.toc .widget-body,
-.TableOfContents .widget-body,
-.table-of-contents .widget-body {
-    padding: 10px 0 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-}
-
-/* Remove any background from TOC containers */
-.widget-toc::before,
-.widget-toc::after,
-.TableOfContents::before,
-.TableOfContents::after {
-    display: none !important;
-}
-
-.widget-toc ul,
-.widget[data-type="toc"] ul,
-.toc ul,
-.TableOfContents ul,
-.table-of-contents ul {
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-}
-
-.widget-toc li,
-.widget[data-type="toc"] li,
-.toc li,
-.TableOfContents li,
-.table-of-contents li {
-    margin: 8px 0 !important;
-    padding: 0 !important;
-    line-height: 1.6 !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-}
-
-.widget-toc a,
-.widget[data-type="toc"] a,
-.toc a {
-    display: block !important;
-    padding: 8px 12px 8px 16px !important;
-    margin: 6px 0 !important;
-    color: #23B0FF !important;
-    text-decoration: none !important;
-    border-radius: 4px !important;
-    transition: all 0.2s ease !important;
-    line-height: 1.5 !important;
-}
-
-.widget-toc a:hover,
-.widget[data-type="toc"] a:hover,
-.toc a:hover {
-    background-color: rgba(35, 176, 255, 0.1) !important;
-    color: #1E9AE6 !important;
-    padding-left: 20px !important;
-}
-
-/* Nested TOC items */
-.widget-toc li li,
-.widget[data-type="toc"] li li,
-.toc li li {
-    margin: 4px 0 4px 15px !important;
-    font-size: 0.9em !important;
-}
-
-.widget-toc li li a,
-.widget[data-type="toc"] li li a,
-.toc li li a {
-    padding: 4px 10px !important;
-    color: rgba(35, 176, 255, 0.8) !important;
-}
-
-.widget-toc li li li,
-.widget[data-type="toc"] li li li,
-.toc li li li {
-    margin: 2px 0 2px 20px !important;
-    font-size: 0.85em !important;
-}
-
 /* Dark mode TOC styling */
 [data-scheme="dark"] .widget-toc a:hover,
 [data-scheme="dark"] .widget[data-type="toc"] a:hover,
@@ -641,26 +528,6 @@ button:hover {
 [data-scheme="dark"] .TableOfContents a:hover,
 [data-scheme="dark"] .table-of-contents a:hover {
     background-color: rgba(35, 176, 255, 0.15) !important;
-}
-
-/* Light mode TOC styling */
-[data-scheme="light"] .widget-toc a:hover,
-[data-scheme="light"] .widget[data-type="toc"] a:hover,
-[data-scheme="light"] .toc a:hover,
-[data-scheme="light"] .TableOfContents a:hover,
-[data-scheme="light"] .table-of-contents a:hover {
-    background-color: rgba(35, 176, 255, 0.08) !important;
-}
-
-/* TESTING: Make TOC text bold and red to verify CSS is loading */
-.TableOfContents a,
-.table-of-contents a,
-.widget-toc a,
-.toc a,
-aside .widget a,
-nav.TableOfContents a {
-    font-weight: bold !important;
-    color: red !important;
 }
 
 /* Wide mode toggle button styling */
@@ -852,82 +719,6 @@ aside,
     }
 }
 
-// Alternative selectors for different TOC structures
-#TableOfContents,
-.table-of-contents {
-    .title,
-    .header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-    }
-}
-
-// Table of Contents styling - more specific selectors
-.widget.toc,
-.widget-toc,
-#TableOfContents,
-.table-of-contents,
-aside .widget.toc {
-    .widget-title,
-    .widget-title h2,
-    .widget-title h3 {
-        color: white !important;
-    }
-    
-    .widget-content,
-    .toc-content,
-    #TableOfContents {
-        color: white !important;
-        
-        * {
-            color: white !important;
-        }
-        
-        a,
-        a:link,
-        a:visited {
-            color: white !important;
-            
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--accent-color) !important;
-            }
-        }
-        
-        ul, ol {
-            color: white !important;
-            
-            li {
-                color: white !important;
-                
-                a {
-                    color: white !important;
-                }
-            }
-        }
-    }
-}
-
-// Even more specific - target the sidebar widget area
-.left-sidebar .widget,
-.widget-area .widget {
-    &.toc {
-        * {
-            color: white !important;
-        }
-        
-        a {
-            color: white !important;
-            
-            &:hover {
-                color: var(--accent-color) !important;
-            }
-        }
-    }
-}
-
 // Wide mode layout adjustments
 body.wide-mode {
     --main-top-padding: 20px !important;
@@ -1010,20 +801,6 @@ body.wide-mode .post-content pre {
     --card-background: transparent !important;
     --card-background-selected: transparent !important;
 }
-
-/* More aggressive TOC link styling with specific selectors */
-
-#TableOfContents a {
-    display: block !important;
-    padding: 12px 16px 12px 24px !important;
-    margin: 8px 0 !important;
-    text-decoration: none !important;
-    border-radius: 4px !important;
-    transition: all 0.2s ease !important;
-    line-height: 1.6 !important;
-    background: transparent !important;
-}
-
 
 /* Hide last updated timestamp */
 .article-lastmod {
@@ -1269,6 +1046,113 @@ body.wide-mode .post-content pre {
     display: none !important;
 }
 
-a:hover {
-    color: red !important;
+.article-content h2 {
+background: #23B0FF;
+background: linear-gradient(90deg, rgba(35, 176, 255, 1) 40%, rgba(35, 176, 255, 0) 80%);
+}
+
+article:hover {
+    // add bold shadow
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#TableOfContents {
+    padding: 1rem !important;
+}
+
+#TableOfContents li {
+    margin: 1rem !important;
+    padding: 0px !important;
+    padding-left: 1rem !important;
+}
+
+#TableOfContents a {
+    font-size: 1.2rem;
+}
+
+#TableOfContents .active-class > a {
+    background: #23B0FF;
+    line-height: 1.75;
+}
+
+/* Homepage post cover image styling */
+.post-cover {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    border: 3px solid transparent !important;
+    background: linear-gradient(135deg, rgba(35, 176, 255, 0.6) 0%, rgba(107, 105, 214, 0.6) 100%) !important;
+    background-clip: padding-box !important;
+    transition: all 0.3s ease !important;
+    filter: brightness(85%) !important;
+}
+
+.post-cover:hover {
+    filter: brightness(100%) !important;
+    border-color: #23B0FF !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(35, 176, 255, 0.3) !important;
+}
+
+/* Article image container for homepage posts */
+.article-image {
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+    
+    img {
+        transition: transform 0.3s ease !important;
+    }
+    
+    &:hover img {
+        transform: scale(1.05) !important;
+    }
+}
+
+/* Homepage post layout improvements */
+.post.on-list {
+    .parent {
+        display: flex !important;
+        gap: 20px !important;
+        align-items: flex-start !important;
+        
+        .child-left {
+            flex: 2 !important;
+            min-width: 0 !important; /* Prevents flex item from overflowing */
+        }
+        
+        .child-right {
+            flex: 1 !important;
+            max-width: 300px !important;
+            min-width: 250px !important;
+        }
+    }
+}
+
+/* Responsive behavior for post images */
+@media (max-width: 768px) {
+    .post.on-list .parent {
+        flex-direction: column !important;
+        
+        .child-right {
+            max-width: none !important;
+            min-width: none !important;
+        }
+    }
+    
+    .post-cover {
+        height: 150px !important;
+    }
+}
+
+/* Ensure images don't break layout */
+.post.on-list .child-right {
+    .article-image,
+    .post-cover {
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 150px !important;
+    }
 }

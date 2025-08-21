@@ -1,0 +1,24 @@
+{{- $cover := false -}}
+
+{{- if .Params.cover -}}
+  {{- if .Resources.GetMatch .Params.cover }}
+    {{- $cover = (.Resources.GetMatch .Params.cover).RelPermalink -}}
+  {{- else -}}
+    {{- $cover = .Params.cover | absURL -}}
+  {{- end -}}
+{{- else if .Params.image -}}
+  {{- if .Resources.GetMatch .Params.image }}
+    {{- $cover = (.Resources.GetMatch .Params.image).RelPermalink -}}
+  {{- else -}}
+    {{- $cover = .Params.image | absURL -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $cover -}}
+  <a href="{{ .Permalink }}">
+    <img src="{{ $cover }}"
+      class="post-cover"
+      alt="{{ .Title | plainify | default " " }}"
+      loading="lazy" />
+  </a>
+{{- end -}}
