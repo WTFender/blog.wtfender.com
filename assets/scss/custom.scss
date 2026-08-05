@@ -666,8 +666,9 @@ aside,
     display: none !important;
 }
 
-// Hide the Archives widget when element id #TableOfContents has no child elements
-.sidebar.right-sidebar.sticky:has(#TableOfContents:empty) {
+// Hide the right sidebar on article pages when TableOfContents is empty (no headings)
+// Only applies to article pages, not homepage
+.article-page .sidebar.right-sidebar.sticky:has(#TableOfContents:empty) {
     display: none !important;
 }
 // Make #TableOfContents child <a> font text white
