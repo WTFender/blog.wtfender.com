@@ -3,10 +3,10 @@ title: "AWS Temporary Access Tokens"
 date: 2019-11-03T00:00:00-00:00
 cover: /img/aws-tokens/aws-sts-saml.png
 description: Generate temporary AWS access tokens from SAML authentication
-tags: [‘aws’, ‘authentication’, ‘chrome’, ‘extension’, ‘saml’, ‘cli’, ‘credentials’]
+tags: ['aws', 'authentication', 'chrome', 'extension', 'saml', 'cli', 'credentials']
 ---
 
-> ⚠️ **Note**: This project is a reference implementation from 2019. [AWS SSO now provides native CLI support](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) with temporary credential provisioning built-in. For new projects, AWS’s native solution is recommended.
+> ⚠️ **Note**: This project is a reference implementation from 2019. [AWS SSO now provides native CLI support](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html) with temporary credential provisioning built-in. For new projects, AWS's native solution is recommended.
 
 ## Quick Access
 🚀 [Install Chrome Extension](https://chrome.google.com/webstore/detail/aws-saml-keys/gpnbopdmcfpijadjcnfblkpigjngobgl?hl=en)  
@@ -16,7 +16,7 @@ tags: [‘aws’, ‘authentication’, ‘chrome’, ‘extension’, ‘saml�
 
 ## The Problem with Static AWS Credentials
 
-Key management has become increasingly complex. Organizations moved from storing AWS keys scattered across machines to centralizing them in vaults and password managers. But this doesn’t address the fundamental security issues:
+Key management has become increasingly complex. Organizations moved from storing AWS keys scattered across machines to centralizing them in vaults and password managers. But this doesn't address the fundamental security issues:
 
 - **Permanent Keys** — Long-lived credentials with no automatic expiration
 - **Privilege Escalation** — Keys often carry escalated privileges for convenience
@@ -24,7 +24,7 @@ Key management has become increasingly complex. Organizations moved from storing
 - **Rotation Burden** — Regular key rotation requires manual processes and coordination
 - **Audit Trail** — Hard to track when credentials were last used or accessed
 
-Even with bastion hosts or centralized vaults, the root problem remains: the private key still ends up on a user’s local machine at some point.
+Even with bastion hosts or centralized vaults, the root problem remains: the private key still ends up on a user's local machine at some point.
 
 ## The Solution: Temporary Access Tokens
 
